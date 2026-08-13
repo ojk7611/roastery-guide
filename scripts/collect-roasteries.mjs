@@ -53,6 +53,24 @@ const REGION_QUERIES = {
     "서귀포 로스터리",
     "협재 로스터리 카페",
   ],
+  gwangju: [
+    "동명동 로스터리",
+    "충장로 로스터리 카페",
+    "상무지구 로스터리",
+    "봉선동 로스터리 카페",
+  ],
+  daejeon: [
+    "대흥동 로스터리",
+    "둔산동 로스터리 카페",
+    "유성 로스터리",
+    "대전 로스터리 카페",
+  ],
+  daegu: [
+    "삼덕동 로스터리",
+    "동성로 로스터리 카페",
+    "수성못 로스터리",
+    "대구 로스터리 카페",
+  ],
 };
 
 const REQUEST_DELAY_MS = 200;
@@ -132,7 +150,9 @@ async function main() {
   for (const region of regions) {
     const queries = REGION_QUERIES[region];
     if (!queries) {
-      console.error(`알 수 없는 지역: ${region} (seoul | busan | jeju)`);
+      console.error(
+        `알 수 없는 지역: ${region} (${Object.keys(REGION_QUERIES).join(" | ")})`,
+      );
       continue;
     }
 

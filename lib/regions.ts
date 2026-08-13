@@ -16,6 +16,21 @@ export const regions: RegionMeta[] = [
     label: "제주",
     description: "여행자와 로컬이 함께 찾는 자연 속 로스터리",
   },
+  {
+    slug: "gwangju",
+    label: "전남광주통합특별시",
+    description: "동명동・충장로를 중심으로 성장하는 호남권 커피 씬",
+  },
+  {
+    slug: "daejeon",
+    label: "대전",
+    description: "대흥동・둔산동 일대의 로스터리 카페",
+  },
+  {
+    slug: "daegu",
+    label: "대구",
+    description: "동성로・삼덕동・수성못 인근 로스터리 카페",
+  },
 ];
 
 export function getRegion(slug: string): RegionMeta | undefined {

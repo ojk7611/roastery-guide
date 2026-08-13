@@ -1,4 +1,4 @@
-export type Region = "seoul" | "busan" | "jeju";
+export type Region = "seoul" | "busan" | "jeju" | "gwangju" | "daejeon" | "daegu";
 
 export interface RegionMeta {
   slug: Region;

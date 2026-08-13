@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "요새여기 - 로스터리 카페 가이드 | 서울・부산・제주 스페셜티 커피",
+  title: "요새여기 - 로스터리 카페 가이드 | 전국 스페셜티 커피",
   description:
-    "서울, 부산, 제주의 스페셜티 로스터리 카페를 지역별로 모아보는 가이드, 요새여기.",
+    "서울・부산・제주・전남광주통합특별시・대전・대구의 스페셜티 로스터리 카페를 지역별로 모아보는 가이드, 요새여기.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

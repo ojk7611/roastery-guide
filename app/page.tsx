@@ -10,8 +10,8 @@ export default function Home() {
           여행지에서 찾는 스페셜티 로스터리
         </h1>
         <p className="mt-3 max-w-xl text-foreground/70">
-          서울, 부산, 제주의 로스터리 카페를 지역별로 모았습니다. 위치, 영업시간,
-          시그니처 메뉴를 한눈에 확인하세요.
+          전국 로스터리 카페를 지역별로 모았습니다. 위치, 영업시간, 시그니처
+          메뉴를 한눈에 확인하세요.
         </p>
       </section>
 
