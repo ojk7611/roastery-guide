@@ -794,6 +794,22 @@ export const roasteries: Roastery[] = [
     source: "https://blog.naver.com/jeong_lovey/224319292641",
   },
   {
+    id: "gwangju-09",
+    slug: "cafe-yose-sangmu",
+    name: "카페 요새",
+    region: "gwangju",
+    neighborhood: "상무지구",
+    address: "전남광주통합특별시 서구 상무평화로 62 상가1동 1층 101호",
+    hours: "확인 필요 (심야 영업)",
+    tags: ["원두큐레이션", "심야카페", "필터커피"],
+    description:
+      "상무지구 치평동의 아늑한 심야 카페. 직접 로스팅하는 대신 시즌마다 여러 로스터리의 원두를 큐레이션해 필터커피로 선보이는 방식이 특징이다.",
+    signature: ["필터커피", "유자 테린느"],
+    lat: 35.1478559,
+    lng: 126.8453329,
+    source: "https://blog.naver.com/soverydelicouse/224372246693",
+  },
+  {
     id: "daejeon-01",
     slug: "winter-coffee-roasters",
     name: "윈터커피로스터스",
