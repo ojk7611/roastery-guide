@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getRegion } from "@/lib/regions";
 import { getRoastery } from "@/data/roasteries";
+import KakaoMap from "@/components/KakaoMap";
 
 export default async function RoasteryPage(
   props: PageProps<"/[region]/[slug]">,
@@ -51,6 +52,11 @@ export default async function RoasteryPage(
           <dd>{roastery.signature.join(", ")}</dd>
         </div>
       </dl>
+
+      <KakaoMap
+        className="mt-6 h-64 w-full"
+        markers={[{ lat: roastery.lat, lng: roastery.lng, name: roastery.name }]}
+      />
     </div>
   );
 }
