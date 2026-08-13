@@ -20,7 +20,22 @@ export default function KakaoMap({
   className?: string;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [sdkLoaded, setSdkLoaded] = useState(false);
+  const [sdkLoaded, setSdkLoaded] = useState(
+    () => typeof window !== "undefined" && !!window.kakao?.maps,
+  );
+
+  // Client-side navigation reuses the already-inserted <script> tag, so
+  // next/script's onLoad won't fire again on remount — poll for it instead.
+  useEffect(() => {
+    if (sdkLoaded) return;
+    const id = setInterval(() => {
+      if (window.kakao?.maps) {
+        setSdkLoaded(true);
+        clearInterval(id);
+      }
+    }, 100);
+    return () => clearInterval(id);
+  }, [sdkLoaded]);
 
   useEffect(() => {
     if (!sdkLoaded || !containerRef.current || markers.length === 0) return;
