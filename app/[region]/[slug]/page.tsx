@@ -3,6 +3,8 @@ import { getRegion } from "@/lib/regions";
 import { getRoastery } from "@/data/roasteries";
 import KakaoMap from "@/components/KakaoMap";
 import RoasteryPhoto from "@/components/RoasteryPhoto";
+import RoasteryReviews from "@/components/RoasteryReviews";
+import SubmissionForm from "@/components/SubmissionForm";
 
 export default async function RoasteryPage(
   props: PageProps<"/[region]/[slug]">,
@@ -84,6 +86,12 @@ export default async function RoasteryPage(
         className="mt-6 h-64 w-full"
         markers={[{ lat: roastery.lat, lng: roastery.lng, name: roastery.name }]}
       />
+
+      <RoasteryReviews roasterySlug={roastery.slug} />
+
+      <div className="mt-8">
+        <SubmissionForm roasterySlug={roastery.slug} />
+      </div>
     </div>
   );
 }
