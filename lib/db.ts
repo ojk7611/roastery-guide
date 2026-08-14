@@ -10,8 +10,14 @@ export interface Submission {
   createdAt: string;
 }
 
+function getDatabaseUrl() {
+  // Neon's Vercel integration provisions POSTGRES_URL; some setups use
+  // DATABASE_URL instead. Accept either.
+  return process.env.DATABASE_URL || process.env.POSTGRES_URL;
+}
+
 function getSql() {
-  const url = process.env.DATABASE_URL;
+  const url = getDatabaseUrl();
   if (!url) return null;
   return neon(url);
 }
@@ -103,5 +109,5 @@ export async function setSubmissionStatus(
 }
 
 export function isDbConfigured() {
-  return !!process.env.DATABASE_URL;
+  return !!getDatabaseUrl();
 }
