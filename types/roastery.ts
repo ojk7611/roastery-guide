@@ -21,4 +21,5 @@ export interface Roastery {
   lng: number;
   source?: string;
   kakaoUrl?: string;
+  officialLink?: string;
 }

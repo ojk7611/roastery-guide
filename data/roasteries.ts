@@ -25,6 +25,7 @@ export const roasteries: Roastery[] = [
     lng: 126.92121,
     source: "https://blog.naver.com/thfthf1234/224107729932",
     kakaoUrl: "http://place.map.kakao.com/1861665209",
+    officialLink: "https://www.meekcoffeeroasters.co.kr",
   },
   {
     id: "seoul-02",
@@ -41,6 +42,7 @@ export const roasteries: Roastery[] = [
     lng: 127.0493387,
     source: "https://blog.naver.com/2289780/224351677568",
     kakaoUrl: "http://place.map.kakao.com/26455740",
+    officialLink: "https://www.instagram.com/nactacoffeeroasters",
   },
   {
     id: "busan-01",
@@ -57,6 +59,7 @@ export const roasteries: Roastery[] = [
     lng: 129.0682086,
     source: "https://blog.naver.com/lovelyhy92/224334733897",
     kakaoUrl: "http://place.map.kakao.com/674785352",
+    officialLink: "http://www.instagram.com/hytte_roastery",
   },
   {
     id: "jeju-01",
@@ -89,6 +92,7 @@ export const roasteries: Roastery[] = [
     lng: 127.04777478478088,
     source: "https://blog.naver.com/greenandmore/223924029516",
     kakaoUrl: "http://place.map.kakao.com/138688310",
+    officialLink: "https://www.instagram.com/lowkey_coffee",
   },
   {
     id: "seoul-04",
@@ -105,6 +109,7 @@ export const roasteries: Roastery[] = [
     lng: 127.046612279736,
     source: "https://blog.naver.com/j_j0821/224193214336",
     kakaoUrl: "http://place.map.kakao.com/1751060305",
+    officialLink: "http://smartstore.naver.com/betterrl",
   },
   {
     id: "seoul-05",
@@ -121,6 +126,7 @@ export const roasteries: Roastery[] = [
     lng: 127.045710621277,
     source: "https://blog.naver.com/rsakesi1/224263306916",
     kakaoUrl: "http://place.map.kakao.com/424358053",
+    officialLink: "https://www.instagram.com/comoff_coffee",
   },
   {
     id: "seoul-06",
@@ -137,6 +143,7 @@ export const roasteries: Roastery[] = [
     lng: 126.92372978384485,
     source: "https://blog.naver.com/ddokddok0501/224282482734",
     kakaoUrl: "http://place.map.kakao.com/11553130",
+    officialLink: "https://www.instagram.com/coffeelibre_yeonnam",
   },
   {
     id: "seoul-07",
@@ -153,6 +160,7 @@ export const roasteries: Roastery[] = [
     lng: 126.91498394229322,
     source: "https://blog.naver.com/marin35/224339185353",
     kakaoUrl: "http://place.map.kakao.com/24855092",
+    officialLink: "http://beanbrothers.co.kr",
   },
   {
     id: "seoul-08",
@@ -169,6 +177,7 @@ export const roasteries: Roastery[] = [
     lng: 126.918435148767,
     source: "https://blog.naver.com/boram_allie/224309067236",
     kakaoUrl: "http://place.map.kakao.com/12518512",
+    officialLink: "https://www.instagram.com/anthracite_coffee_hapjeong/",
   },
   {
     id: "seoul-09",
@@ -185,6 +194,7 @@ export const roasteries: Roastery[] = [
     lng: 126.926621348495,
     source: "https://blog.naver.com/ctrang22/224303101405",
     kakaoUrl: "http://place.map.kakao.com/11831442",
+    officialLink: "http://www.millocoffee.com",
   },
   {
     id: "busan-03",
@@ -217,6 +227,7 @@ export const roasteries: Roastery[] = [
     lng: 129.1443967324331,
     source: "https://blog.naver.com/z_everywhere/224361868744",
     kakaoUrl: "http://place.map.kakao.com/965653384",
+    officialLink: "https://www.momos.co.kr/",
   },
   {
     id: "busan-07",
@@ -249,6 +260,7 @@ export const roasteries: Roastery[] = [
     lng: 129.11226772312568,
     source: "https://blog.naver.com/jaepyeon-/224367496956",
     kakaoUrl: "http://place.map.kakao.com/642922473",
+    officialLink: "https://smartstore.naver.com/sangroksubusan",
   },
   {
     id: "jeju-03",
@@ -265,6 +277,7 @@ export const roasteries: Roastery[] = [
     lng: 126.413706771462,
     source: "https://blog.naver.com/artraving/224344273740",
     kakaoUrl: "http://place.map.kakao.com/2040536932",
+    officialLink: "https://www.instagram.com/coffeenap_roasters",
   },
   {
     id: "jeju-04",
@@ -281,6 +294,7 @@ export const roasteries: Roastery[] = [
     lng: 126.322022317852,
     source: "https://blog.naver.com/mymuziq/224302447002",
     kakaoUrl: "http://place.map.kakao.com/136326070",
+    officialLink: "https://smartstore.naver.com/greenmilecoffee_jeju",
   },
   {
     id: "jeju-07",
@@ -297,6 +311,7 @@ export const roasteries: Roastery[] = [
     lng: 126.29617532126095,
     source: "https://blog.naver.com/mukzalog/224361883055",
     kakaoUrl: "http://place.map.kakao.com/655909706",
+    officialLink: "http://codeinecoffeeroasters.com/",
   },
   {
     id: "jeju-09",
@@ -329,6 +344,7 @@ export const roasteries: Roastery[] = [
     lng: 126.9202237297,
     source: "https://blog.naver.com/kse0149/224194260530",
     kakaoUrl: "http://place.map.kakao.com/712401118",
+    officialLink: "https://smartstore.naver.com/coffeenaproasters",
   },
   {
     id: "seoul-11",
@@ -361,6 +377,7 @@ export const roasteries: Roastery[] = [
     lng: 126.921359543611,
     source: "https://blog.naver.com/love_0924/224357744206",
     kakaoUrl: "http://place.map.kakao.com/1276356795",
+    officialLink: "http://www.instagram.com/reissuecoffee",
   },
   {
     id: "seoul-16",
@@ -377,6 +394,7 @@ export const roasteries: Roastery[] = [
     lng: 126.92091787298907,
     source: "https://blog.naver.com/lsh7984/224220453986",
     kakaoUrl: "http://place.map.kakao.com/1883958168",
+    officialLink: "https://www.instagram.com/sandstone.coffee.lab",
   },
   {
     id: "seoul-17",
@@ -393,6 +411,7 @@ export const roasteries: Roastery[] = [
     lng: 126.926302184814,
     source: "https://blog.naver.com/dlwjdtjddlek/224283395813",
     kakaoUrl: "http://place.map.kakao.com/294762430",
+    officialLink: "https://www.instagram.com/morningcalm.coffee",
   },
   {
     id: "busan-10",
@@ -409,6 +428,7 @@ export const roasteries: Roastery[] = [
     lng: 129.17310853325452,
     source: "https://blog.naver.com/hye_eeee/224361322358",
     kakaoUrl: "http://place.map.kakao.com/1885498048",
+    officialLink: "https://blog.naver.com/whatisthegoodlife",
   },
   {
     id: "busan-12",
@@ -441,6 +461,7 @@ export const roasteries: Roastery[] = [
     lng: 129.06759372991,
     source: "https://blog.naver.com/ilove2ating/224317685168",
     kakaoUrl: "http://place.map.kakao.com/1027187749",
+    officialLink: "http://www.instagram.com/naive_brewers",
   },
   {
     id: "busan-15",
@@ -457,6 +478,7 @@ export const roasteries: Roastery[] = [
     lng: 129.118157004146,
     source: "https://blog.naver.com/kangyh123/224033633782",
     kakaoUrl: "http://place.map.kakao.com/1936517592",
+    officialLink: "https://www.instagram.com/noah.brws",
   },
   {
     id: "jeju-10",
@@ -473,6 +495,7 @@ export const roasteries: Roastery[] = [
     lng: 126.399833108739,
     source: "https://blog.naver.com/yonil89/224084185730",
     kakaoUrl: "http://place.map.kakao.com/583362924",
+    officialLink: "https://www.instagram.com/poyong_jeju",
   },
   {
     id: "jeju-11",
@@ -489,6 +512,7 @@ export const roasteries: Roastery[] = [
     lng: 126.191279200414,
     source: "https://blog.naver.com/beinsorrow/224367199346",
     kakaoUrl: "http://place.map.kakao.com/1663306728",
+    officialLink: "https://www.instagram.com/meul_coffee_roasters",
   },
   {
     id: "gwangju-01",
@@ -569,6 +593,7 @@ export const roasteries: Roastery[] = [
     lng: 126.8453329,
     source: "https://blog.naver.com/soverydelicouse/224372246693",
     kakaoUrl: "http://place.map.kakao.com/1928890071",
+    officialLink: "https://www.instagram.com/place_yose",
   },
   {
     id: "daejeon-01",
@@ -633,6 +658,7 @@ export const roasteries: Roastery[] = [
     lng: 127.309640095406,
     source: "https://blog.naver.com/gusrud3v3/224369071738",
     kakaoUrl: "http://place.map.kakao.com/1971429923",
+    officialLink: "http://instagram.com/eungubicoffee",
   },
   {
     id: "daegu-01",
@@ -681,6 +707,7 @@ export const roasteries: Roastery[] = [
     lng: 128.60855992243307,
     source: "https://blog.naver.com/kindpetit330/224317343466",
     kakaoUrl: "http://place.map.kakao.com/889480024",
+    officialLink: "https://www.instagram.com/pronoun_roasters",
   },
   {
     id: "seoul-19",
@@ -697,6 +724,7 @@ export const roasteries: Roastery[] = [
     lng: 127.04589900708892,
     source: "https://blog.naver.com/onaive/224317015449",
     kakaoUrl: "http://place.map.kakao.com/1904529538",
+    officialLink: "https://blog.naver.com/cconsumers",
   },
   {
     id: "seoul-20",
@@ -713,6 +741,7 @@ export const roasteries: Roastery[] = [
     lng: 127.050313401223,
     source: "https://bctrip.tistory.com/354",
     kakaoUrl: "http://place.map.kakao.com/534239541",
+    officialLink: "https://instagram.com/fika.workshop",
   },
   {
     id: "seoul-23",
@@ -729,6 +758,7 @@ export const roasteries: Roastery[] = [
     lng: 126.9244497725609,
     source: "https://blog.naver.com/shrewd/224315866171",
     kakaoUrl: "http://place.map.kakao.com/1652141411",
+    officialLink: "https://www.instagram.com/doduk_kyubum",
   },
   {
     id: "jeju-12",
@@ -745,6 +775,7 @@ export const roasteries: Roastery[] = [
     lng: 126.52867106179917,
     source: "https://blog.naver.com/513joanna/224294722194",
     kakaoUrl: "http://place.map.kakao.com/1505002027",
+    officialLink: "https://coffeefinder.co.kr",
   },
   {
     id: "jeju-13",
@@ -777,6 +808,7 @@ export const roasteries: Roastery[] = [
     lng: 126.2178868871938,
     source: "https://blog.naver.com/malang_e493/224349201214",
     kakaoUrl: "http://place.map.kakao.com/2036344906",
+    officialLink: "http://smartstore.naver.com/hasorocoffee",
   },
   {
     id: "jeju-16",
@@ -793,6 +825,7 @@ export const roasteries: Roastery[] = [
     lng: 126.345977552667,
     source: "https://blog.naver.com/skdisk22/224328636349",
     kakaoUrl: "http://place.map.kakao.com/1121041467",
+    officialLink: "http://instagram.com/ep_coffee",
   },
   {
     id: "jeju-17",
@@ -809,6 +842,7 @@ export const roasteries: Roastery[] = [
     lng: 126.69477444538903,
     source: "https://blog.naver.com/kbc810/224302852166",
     kakaoUrl: "http://place.map.kakao.com/1491888881",
+    officialLink: "http://www.instagram.com/alma_coffee_factory_jeju",
   },
   {
     id: "gwangju-11",
@@ -825,6 +859,7 @@ export const roasteries: Roastery[] = [
     lng: 126.920031435214,
     source: "https://blog.naver.com/dlwnsrms89/224284916615",
     kakaoUrl: "http://place.map.kakao.com/1155250748",
+    officialLink: "https://www.instagram.com/cafe_jinjungsung",
   },
   {
     id: "daejeon-11",
@@ -873,6 +908,7 @@ export const roasteries: Roastery[] = [
     lng: 127.42346644265,
     source: "https://blog.naver.com/aupu_aupu/224319943291",
     kakaoUrl: "http://place.map.kakao.com/1066483856",
+    officialLink: "https://smartstore.naver.com/countcoffee_kr",
   },
   {
     id: "daegu-07",
@@ -889,6 +925,7 @@ export const roasteries: Roastery[] = [
     lng: 128.62214211814555,
     source: "https://blog.naver.com/sleh2010/224371813131",
     kakaoUrl: "http://place.map.kakao.com/19713278",
+    officialLink: "http://커조남.com",
   },
   {
     id: "daegu-08",
@@ -905,6 +942,7 @@ export const roasteries: Roastery[] = [
     lng: 128.611845748334,
     source: "https://blog.naver.com/saecomi/224324471961",
     kakaoUrl: "http://place.map.kakao.com/147076660",
+    officialLink: "https://smartstore.naver.com/guumcoffee",
   },
   {
     id: "daegu-09",
@@ -921,6 +959,7 @@ export const roasteries: Roastery[] = [
     lng: 128.602058386486,
     source: "https://blog.naver.com/tgs05137/224349661299",
     kakaoUrl: "http://place.map.kakao.com/1084194239",
+    officialLink: "https://www.instagram.com/agitcoffee_",
   },
   {
     id: "seoul-24",
@@ -937,6 +976,7 @@ export const roasteries: Roastery[] = [
     lng: 126.917571308577,
     source: "https://blog.naver.com/jhj3725/224343146085",
     kakaoUrl: "http://place.map.kakao.com/1994915181",
+    officialLink: "http://www.instagram.com/ymcoffeeproject",
   },
   {
     id: "seoul-25",
@@ -953,6 +993,7 @@ export const roasteries: Roastery[] = [
     lng: 127.053132134763,
     source: "https://blog.naver.com/ajung8904/224045341639",
     kakaoUrl: "http://place.map.kakao.com/1377610692",
+    officialLink: "https://www.instagram.com/yesyesyall_",
   },
   {
     id: "seoul-26",
@@ -969,6 +1010,7 @@ export const roasteries: Roastery[] = [
     lng: 126.996011593008,
     source: "https://blog.naver.com/ssongji337/224356594635",
     kakaoUrl: "http://place.map.kakao.com/2102801120",
+    officialLink: "https://hebecoffee.kr",
   },
   {
     id: "seoul-27",
@@ -985,6 +1027,7 @@ export const roasteries: Roastery[] = [
     lng: 126.97892048108426,
     source: "https://blog.naver.com/sara4349/224300873833",
     kakaoUrl: "http://place.map.kakao.com/977211586",
+    officialLink: "http://feltcoffee.com",
   },
   {
     id: "seoul-28",
@@ -1001,6 +1044,7 @@ export const roasteries: Roastery[] = [
     lng: 127.12185109538237,
     source: "https://blog.naver.com/orangesirena/224314651881",
     kakaoUrl: "http://place.map.kakao.com/19163279",
+    officialLink: "http://www.coffeemontage.com/",
   },
   {
     id: "seoul-29",
@@ -1048,6 +1092,7 @@ export const roasteries: Roastery[] = [
     lng: 126.917485354012,
     source: "https://blog.naver.com/fascinoya/223711562708",
     kakaoUrl: "http://place.map.kakao.com/857920937",
+    officialLink: "https://www.identity-coffeelab.co.kr/BRAND",
   },
   {
     id: "seoul-32",
@@ -1064,6 +1109,7 @@ export const roasteries: Roastery[] = [
     lng: 126.90568086892758,
     source: "https://blog.naver.com/ahrfus202/222803471964",
     kakaoUrl: "http://place.map.kakao.com/27481601",
+    officialLink: "http://www.deepbluelakecoffee.com",
   },
   {
     id: "seoul-33",
@@ -1080,6 +1126,7 @@ export const roasteries: Roastery[] = [
     lng: 126.9652764258,
     source: "https://blog.naver.com/pawnandqueen/223767767650",
     kakaoUrl: "http://place.map.kakao.com/877628364",
+    officialLink: "https://www.instagram.com/ahnmill_",
   },
   {
     id: "jeju-06",
@@ -1112,6 +1159,7 @@ export const roasteries: Roastery[] = [
     lng: 126.5282513091222,
     source: "https://blog.naver.com/wjdtoquf/224106346449",
     kakaoUrl: "http://place.map.kakao.com/2006695291",
+    officialLink: "https://thebarnberlin.kr/",
   },
 ];
 
