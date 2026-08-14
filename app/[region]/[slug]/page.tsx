@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getRegion } from "@/lib/regions";
 import { getRoastery } from "@/data/roasteries";
 import KakaoMap from "@/components/KakaoMap";
+import RoasteryPhoto from "@/components/RoasteryPhoto";
 
 export default async function RoasteryPage(
   props: PageProps<"/[region]/[slug]">,
@@ -23,7 +24,13 @@ export default async function RoasteryPage(
         {roastery.name}
       </h1>
 
-      <ul className="mt-4 flex flex-wrap gap-1.5">
+      <RoasteryPhoto
+        slug={roastery.slug}
+        name={roastery.name}
+        className="relative mt-6 h-64 w-full"
+      />
+
+      <ul className="mt-6 flex flex-wrap gap-1.5">
         {roastery.tags.map((tag) => (
           <li
             key={tag}
