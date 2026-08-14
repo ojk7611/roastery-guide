@@ -30,6 +30,17 @@ export default async function RoasteryPage(
         className="relative mt-6 h-64 w-full"
       />
 
+      {roastery.kakaoUrl && (
+        <a
+          href={roastery.kakaoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 inline-block text-xs text-foreground/50 underline decoration-foreground/30 underline-offset-2 hover:text-foreground/80"
+        >
+          카카오맵에서 실제 사진 더보기 →
+        </a>
+      )}
+
       <ul className="mt-6 flex flex-wrap gap-1.5">
         {roastery.tags.map((tag) => (
           <li

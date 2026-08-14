@@ -20,4 +20,5 @@ export interface Roastery {
   lat: number;
   lng: number;
   source?: string;
+  kakaoUrl?: string;
 }

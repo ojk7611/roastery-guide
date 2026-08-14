@@ -19,12 +19,12 @@ export const roasteries: Roastery[] = [
     address: "서울 마포구 성미산로29길 35-18 1층",
     hours: "확인 필요",
     tags: ["직접로스팅", "로스터리카페", "주택개조"],
-    description:
-      "연남동 골목의 주택을 개조한 로스터리 카페. 매장 안에 로스팅룸이 있어 원두를 직접 볶으며, 외부 테이블도 있어 골목 분위기를 즐기며 앉을 수 있다.",
+    description: "연남동 골목의 주택을 개조한 로스터리 카페. 매장 안에 로스팅룸이 있어 원두를 직접 볶으며, 외부 테이블도 있어 골목 분위기를 즐기며 앉을 수 있다.",
     signature: ["로스팅룸 원두 드립커피"],
     lat: 37.5656897,
     lng: 126.92121,
     source: "https://blog.naver.com/thfthf1234/224107729932",
+    kakaoUrl: "http://place.map.kakao.com/1861665209",
   },
   {
     id: "seoul-02",
@@ -35,12 +35,12 @@ export const roasteries: Roastery[] = [
     address: "서울 성동구 상원6나길 6",
     hours: "평일 11:30 - 17:30 (주말 운영시간 확인 필요)",
     tags: ["직접로스팅", "단골많음", "평일운영"],
-    description:
-      "뚝섬 근처 성수동 골목에 있는 로스터리로, 평일 오후 시간대 위주로 운영한다. 단골 방문객이 많다고 알려져 있다.",
+    description: "뚝섬 근처 성수동 골목에 있는 로스터리로, 평일 오후 시간대 위주로 운영한다. 단골 방문객이 많다고 알려져 있다.",
     signature: ["시그니처 드립커피"],
     lat: 37.5485429,
     lng: 127.0493387,
     source: "https://blog.naver.com/2289780/224351677568",
+    kakaoUrl: "http://place.map.kakao.com/26455740",
   },
   {
     id: "busan-01",
@@ -51,12 +51,12 @@ export const roasteries: Roastery[] = [
     address: "부산 부산진구 동성로 59",
     hours: "확인 필요",
     tags: ["핸드드립", "직접로스팅", "전포카페거리"],
-    description:
-      "전포 카페거리에서 조금 떨어진 위치에 있는 로스터리. 케냐 무티투 AA 같은 싱글오리진 드립과 디저트 메뉴로 알려져 있다.",
+    description: "전포 카페거리에서 조금 떨어진 위치에 있는 로스터리. 케냐 무티투 AA 같은 싱글오리진 드립과 디저트 메뉴로 알려져 있다.",
     signature: ["케냐 무티투 AA 드립", "라즈베리롤"],
     lat: 35.1557531,
     lng: 129.0682086,
     source: "https://blog.naver.com/lovelyhy92/224334733897",
+    kakaoUrl: "http://place.map.kakao.com/674785352",
   },
   {
     id: "jeju-01",
@@ -67,12 +67,12 @@ export const roasteries: Roastery[] = [
     address: "제주 제주시 애월읍 고내로7길 3 1층",
     hours: "확인 필요",
     tags: ["숯불로스팅", "융드립", "제주"],
-    description:
-      "애월에 위치한 로스터리로, 가스가 아닌 숯불로 원두를 로스팅하는 방식이 특징이다. 커피 본연의 맛에 집중한 카페로 소개되곤 한다.",
+    description: "애월에 위치한 로스터리로, 가스가 아닌 숯불로 원두를 로스팅하는 방식이 특징이다. 커피 본연의 맛에 집중한 카페로 소개되곤 한다.",
     signature: ["숯불 로스팅 원두", "융드립 커피"],
     lat: 33.4634302,
     lng: 126.3388175,
     source: "https://blog.naver.com/furry_man/224221970212",
+    kakaoUrl: "http://place.map.kakao.com/1577989677",
   },
   {
     id: "seoul-03",
@@ -83,12 +83,12 @@ export const roasteries: Roastery[] = [
     address: "서울 성동구 뚝섬로1나길 5",
     hours: "확인 필요",
     tags: ["핸드드립", "드립백", "감성카페"],
-    description:
-      "헤이그라운드 건물에 입점한 로스터리 카페. 커피 애호가들의 카페 투어 코스로 자주 소개되며, 드립백 커피도 함께 판매한다.",
+    description: "헤이그라운드 건물에 입점한 로스터리 카페. 커피 애호가들의 카페 투어 코스로 자주 소개되며, 드립백 커피도 함께 판매한다.",
     signature: ["드립백 커피", "라떼"],
     lat: 37.544471727511365,
     lng: 127.04777478478088,
     source: "https://blog.naver.com/greenandmore/223924029516",
+    kakaoUrl: "http://place.map.kakao.com/138688310",
   },
   {
     id: "seoul-04",
@@ -99,12 +99,12 @@ export const roasteries: Roastery[] = [
     address: "서울 성동구 왕십리로6길 18-1",
     hours: "확인 필요",
     tags: ["로스터리카페", "쇼룸", "핸드드립"],
-    description:
-      "서울숲 인근에 위치한 로스터리 겸 쇼룸. 조용한 분위기에서 커피 한 잔의 완성도에 집중하는 곳으로 소개된다.",
+    description: "서울숲 인근에 위치한 로스터리 겸 쇼룸. 조용한 분위기에서 커피 한 잔의 완성도에 집중하는 곳으로 소개된다.",
     signature: ["핸드드립 커피", "플랫화이트"],
     lat: 37.5456705209937,
     lng: 127.046612279736,
     source: "https://blog.naver.com/j_j0821/224193214336",
+    kakaoUrl: "http://place.map.kakao.com/1751060305",
   },
   {
     id: "seoul-05",
@@ -120,6 +120,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5460231640976,
     lng: 127.045710621277,
     source: "https://blog.naver.com/rsakesi1/224263306916",
+    kakaoUrl: "http://place.map.kakao.com/424358053",
   },
   {
     id: "seoul-06",
@@ -130,12 +131,12 @@ export const roasteries: Roastery[] = [
     address: "서울 마포구 성미산로32길 20-5",
     hours: "확인 필요",
     tags: ["스페셜티", "직접로스팅", "커피애호가"],
-    description:
-      "한국 스페셜티 커피 씬을 이끈 로스터리 중 하나로 꼽히는 커피 리브레의 연남동 매장. 원두 자체의 완성도로 커피 애호가들 사이에서 꾸준히 언급된다.",
+    description: "한국 스페셜티 커피 씬을 이끈 로스터리 중 하나로 꼽히는 커피 리브레의 연남동 매장. 원두 자체의 완성도로 커피 애호가들 사이에서 꾸준히 언급된다.",
     signature: ["싱글오리진 드립"],
     lat: 37.56364350559978,
     lng: 126.92372978384485,
     source: "https://blog.naver.com/ddokddok0501/224282482734",
+    kakaoUrl: "http://place.map.kakao.com/11553130",
   },
   {
     id: "seoul-07",
@@ -146,12 +147,12 @@ export const roasteries: Roastery[] = [
     address: "서울 마포구 토정로 35-1",
     hours: "확인 필요",
     tags: ["로스터리카페", "대형카페", "한강뷰"],
-    description:
-      "합정·상수 일대에서 규모가 큰 편에 속하는 로스터리 카페로, 층고가 높고 개방감 있는 공간이 특징이다.",
+    description: "합정·상수 일대에서 규모가 큰 편에 속하는 로스터리 카페로, 층고가 높고 개방감 있는 공간이 특징이다.",
     signature: ["드립커피", "에스프레소"],
     lat: 37.54569416640838,
     lng: 126.91498394229322,
     source: "https://blog.naver.com/marin35/224339185353",
+    kakaoUrl: "http://place.map.kakao.com/24855092",
   },
   {
     id: "seoul-08",
@@ -162,12 +163,12 @@ export const roasteries: Roastery[] = [
     address: "서울 마포구 토정로5길 10",
     hours: "확인 필요",
     tags: ["스페셜티", "직접로스팅", "주택개조"],
-    description:
-      "한국 스페셜티 커피 씬 초기부터 알려진 로스터리 브랜드 앤트러사이트의 합정 매장. 옛 신발공장을 개조한 공간으로도 유명하다.",
+    description: "한국 스페셜티 커피 씬 초기부터 알려진 로스터리 브랜드 앤트러사이트의 합정 매장. 옛 신발공장을 개조한 공간으로도 유명하다.",
     signature: ["브루잉 커피"],
     lat: 37.5458137305902,
     lng: 126.918435148767,
     source: "https://blog.naver.com/boram_allie/224309067236",
+    kakaoUrl: "http://place.map.kakao.com/12518512",
   },
   {
     id: "seoul-09",
@@ -178,12 +179,12 @@ export const roasteries: Roastery[] = [
     address: "서울 마포구 양화로18안길 36",
     hours: "확인 필요",
     tags: ["블루리본", "핸드드립", "산미"],
-    description:
-      "블루리본서베이에 여러 해 연속 선정된 홍대 인근 로스터리 카페. 산미 있는 원두와 조용한 분위기로 알려져 있다.",
+    description: "블루리본서베이에 여러 해 연속 선정된 홍대 인근 로스터리 카페. 산미 있는 원두와 조용한 분위기로 알려져 있다.",
     signature: ["핸드드립 커피"],
     lat: 37.5570563492764,
     lng: 126.926621348495,
     source: "https://blog.naver.com/ctrang22/224303101405",
+    kakaoUrl: "http://place.map.kakao.com/11831442",
   },
   {
     id: "busan-03",
@@ -194,12 +195,12 @@ export const roasteries: Roastery[] = [
     address: "부산 부산진구 동성로 29",
     hours: "확인 필요",
     tags: ["블루리본", "전포카페거리", "시그니처음료"],
-    description:
-      "전포 카페거리에서 블루리본서베이에 선정된 로스터리. 커피 외에 밀크티 같은 시그니처 음료로도 알려져 있다.",
+    description: "전포 카페거리에서 블루리본서베이에 선정된 로스터리. 커피 외에 밀크티 같은 시그니처 음료로도 알려져 있다.",
     signature: ["밀크티", "드립커피"],
     lat: 35.1529634401039,
     lng: 129.068256183855,
     source: "https://blog.naver.com/sensy89/224369595347",
+    kakaoUrl: "http://place.map.kakao.com/1288617122",
   },
   {
     id: "busan-05",
@@ -210,12 +211,12 @@ export const roasteries: Roastery[] = [
     address: "부산 해운대구 마린시티1로 91",
     hours: "매일 07:00 - 18:00 (라스트오더 17:30)",
     tags: ["오션뷰", "핸드드립", "스페셜티"],
-    description:
-      "부산을 대표하는 스페셜티 로스터리 모모스커피의 마린시티 매장. 해변 바로 앞에 있어 오션뷰 핸드드립 커피로 알려져 있다.",
+    description: "부산을 대표하는 스페셜티 로스터리 모모스커피의 마린시티 매장. 해변 바로 앞에 있어 오션뷰 핸드드립 커피로 알려져 있다.",
     signature: ["핸드드립 커피"],
     lat: 35.15445350585095,
     lng: 129.1443967324331,
     source: "https://blog.naver.com/z_everywhere/224361868744",
+    kakaoUrl: "http://place.map.kakao.com/965653384",
   },
   {
     id: "busan-07",
@@ -231,6 +232,7 @@ export const roasteries: Roastery[] = [
     lat: 35.14689018826688,
     lng: 129.113895233369,
     source: "https://blog.naver.com/deuvlog/224361852534",
+    kakaoUrl: "http://place.map.kakao.com/1250905517",
   },
   {
     id: "busan-08",
@@ -241,12 +243,12 @@ export const roasteries: Roastery[] = [
     address: "부산 수영구 광안해변로 19",
     hours: "확인 필요",
     tags: ["라이트로스팅", "산미", "필터커피"],
-    description:
-      "이름 그대로 라이트 로스팅으로 산미 있는 원두를 다루는 로스터리. 원두별 로스팅 단계에 따른 맛 변화를 설명해주는 것으로 알려져 있다.",
+    description: "이름 그대로 라이트 로스팅으로 산미 있는 원두를 다루는 로스터리. 원두별 로스팅 단계에 따른 맛 변화를 설명해주는 것으로 알려져 있다.",
     signature: ["필터커피"],
     lat: 35.137279839308114,
     lng: 129.11226772312568,
     source: "https://blog.naver.com/jaepyeon-/224367496956",
+    kakaoUrl: "http://place.map.kakao.com/642922473",
   },
   {
     id: "jeju-03",
@@ -257,12 +259,12 @@ export const roasteries: Roastery[] = [
     address: "제주 제주시 애월읍 하귀2길 45",
     hours: "매일 09:00 - 17:30 (라스트오더 17:00)",
     tags: ["로스터리카페", "애견동반", "돌담건물"],
-    description:
-      "애월 하귀마을의 제주 돌담 건물을 활용한 로스터리 카페. 애견 동반이 가능해 여행객들 사이에서 자주 언급된다.",
+    description: "애월 하귀마을의 제주 돌담 건물을 활용한 로스터리 카페. 애견 동반이 가능해 여행객들 사이에서 자주 언급된다.",
     signature: ["드립커피"],
     lat: 33.4891959886432,
     lng: 126.413706771462,
     source: "https://blog.naver.com/artraving/224344273740",
+    kakaoUrl: "http://place.map.kakao.com/2040536932",
   },
   {
     id: "jeju-04",
@@ -273,12 +275,12 @@ export const roasteries: Roastery[] = [
     address: "제주 제주시 애월읍 애월로 137-1",
     hours: "확인 필요",
     tags: ["사이폰커피", "조용한카페", "서울출신브랜드"],
-    description:
-      "서울에서 먼저 알려진 그린마일커피의 애월 매장. 사이폰으로 내리는 커피가 시그니처로 소개된다.",
+    description: "서울에서 먼저 알려진 그린마일커피의 애월 매장. 사이폰으로 내리는 커피가 시그니처로 소개된다.",
     signature: ["사이폰 커피"],
     lat: 33.4640790221092,
     lng: 126.322022317852,
     source: "https://blog.naver.com/mymuziq/224302447002",
+    kakaoUrl: "http://place.map.kakao.com/136326070",
   },
   {
     id: "jeju-07",
@@ -294,6 +296,7 @@ export const roasteries: Roastery[] = [
     lat: 33.23516229113949,
     lng: 126.29617532126095,
     source: "https://blog.naver.com/mukzalog/224361883055",
+    kakaoUrl: "http://place.map.kakao.com/655909706",
   },
   {
     id: "jeju-09",
@@ -309,6 +312,7 @@ export const roasteries: Roastery[] = [
     lat: 33.4046259669622,
     lng: 126.25511277389,
     source: "https://blog.naver.com/2yjyj/223274261769",
+    kakaoUrl: "http://place.map.kakao.com/380554087",
   },
   {
     id: "seoul-10",
@@ -324,6 +328,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5664153551362,
     lng: 126.9202237297,
     source: "https://blog.naver.com/kse0149/224194260530",
+    kakaoUrl: "http://place.map.kakao.com/712401118",
   },
   {
     id: "seoul-11",
@@ -339,6 +344,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5662710734055,
     lng: 126.920042780043,
     source: "https://blog.naver.com/useful-knowledge/224365708832",
+    kakaoUrl: "http://place.map.kakao.com/262767594",
   },
   {
     id: "seoul-12",
@@ -354,6 +360,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5626913995717,
     lng: 126.921359543611,
     source: "https://blog.naver.com/love_0924/224357744206",
+    kakaoUrl: "http://place.map.kakao.com/1276356795",
   },
   {
     id: "seoul-16",
@@ -369,6 +376,7 @@ export const roasteries: Roastery[] = [
     lat: 37.566141919431445,
     lng: 126.92091787298907,
     source: "https://blog.naver.com/lsh7984/224220453986",
+    kakaoUrl: "http://place.map.kakao.com/1883958168",
   },
   {
     id: "seoul-17",
@@ -384,6 +392,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5628099158368,
     lng: 126.926302184814,
     source: "https://blog.naver.com/dlwjdtjddlek/224283395813",
+    kakaoUrl: "http://place.map.kakao.com/294762430",
   },
   {
     id: "busan-10",
@@ -399,6 +408,7 @@ export const roasteries: Roastery[] = [
     lat: 35.16185371391722,
     lng: 129.17310853325452,
     source: "https://blog.naver.com/hye_eeee/224361322358",
+    kakaoUrl: "http://place.map.kakao.com/1885498048",
   },
   {
     id: "busan-12",
@@ -414,6 +424,7 @@ export const roasteries: Roastery[] = [
     lat: 35.15073165784834,
     lng: 129.1131289361271,
     source: "https://blog.naver.com/happybokchi/224261149212",
+    kakaoUrl: "http://place.map.kakao.com/218221208",
   },
   {
     id: "busan-14",
@@ -429,6 +440,7 @@ export const roasteries: Roastery[] = [
     lat: 35.1531477741294,
     lng: 129.06759372991,
     source: "https://blog.naver.com/ilove2ating/224317685168",
+    kakaoUrl: "http://place.map.kakao.com/1027187749",
   },
   {
     id: "busan-15",
@@ -444,6 +456,7 @@ export const roasteries: Roastery[] = [
     lat: 35.1563454105282,
     lng: 129.118157004146,
     source: "https://blog.naver.com/kangyh123/224033633782",
+    kakaoUrl: "http://place.map.kakao.com/1936517592",
   },
   {
     id: "jeju-10",
@@ -459,6 +472,7 @@ export const roasteries: Roastery[] = [
     lat: 33.4587099715331,
     lng: 126.399833108739,
     source: "https://blog.naver.com/yonil89/224084185730",
+    kakaoUrl: "http://place.map.kakao.com/583362924",
   },
   {
     id: "jeju-11",
@@ -474,6 +488,7 @@ export const roasteries: Roastery[] = [
     lat: 33.276900822671,
     lng: 126.191279200414,
     source: "https://blog.naver.com/beinsorrow/224367199346",
+    kakaoUrl: "http://place.map.kakao.com/1663306728",
   },
   {
     id: "gwangju-01",
@@ -489,6 +504,7 @@ export const roasteries: Roastery[] = [
     lat: 35.1492521925031,
     lng: 126.927755182904,
     source: "https://blog.naver.com/tythink/224364928587",
+    kakaoUrl: "http://place.map.kakao.com/470177479",
   },
   {
     id: "gwangju-02",
@@ -504,6 +520,7 @@ export const roasteries: Roastery[] = [
     lat: 35.1494147602734,
     lng: 126.922444573103,
     source: "https://blog.naver.com/wooya0426/224365382531",
+    kakaoUrl: "http://place.map.kakao.com/1288312626",
   },
   {
     id: "gwangju-04",
@@ -519,6 +536,7 @@ export const roasteries: Roastery[] = [
     lat: 35.154975062451655,
     lng: 126.84946401418966,
     source: "https://blog.naver.com/ahla0716/224024907660",
+    kakaoUrl: "http://place.map.kakao.com/1332571014",
   },
   {
     id: "gwangju-05",
@@ -534,6 +552,7 @@ export const roasteries: Roastery[] = [
     lat: 35.158645602444885,
     lng: 126.86332593959332,
     source: "https://blog.naver.com/1ekdma1/223674401232",
+    kakaoUrl: "http://place.map.kakao.com/1728326531",
   },
   {
     id: "gwangju-09",
@@ -544,12 +563,12 @@ export const roasteries: Roastery[] = [
     address: "전남광주통합특별시 서구 상무평화로 62 상가1동 1층 101호",
     hours: "확인 필요 (심야 영업)",
     tags: ["원두큐레이션", "심야카페", "필터커피"],
-    description:
-      "상무지구 치평동의 아늑한 심야 카페. 직접 로스팅하는 대신 시즌마다 여러 로스터리의 원두를 큐레이션해 필터커피로 선보이는 방식이 특징이다.",
+    description: "상무지구 치평동의 아늑한 심야 카페. 직접 로스팅하는 대신 시즌마다 여러 로스터리의 원두를 큐레이션해 필터커피로 선보이는 방식이 특징이다.",
     signature: ["필터커피", "유자 테린느"],
     lat: 35.1478559,
     lng: 126.8453329,
     source: "https://blog.naver.com/soverydelicouse/224372246693",
+    kakaoUrl: "http://place.map.kakao.com/1928890071",
   },
   {
     id: "daejeon-01",
@@ -565,6 +584,7 @@ export const roasteries: Roastery[] = [
     lat: 36.3246325672343,
     lng: 127.424046631384,
     source: "https://blog.naver.com/shj52593/224345588050",
+    kakaoUrl: "http://place.map.kakao.com/1389921557",
   },
   {
     id: "daejeon-02",
@@ -580,6 +600,7 @@ export const roasteries: Roastery[] = [
     lat: 36.326795057249,
     lng: 127.423632915573,
     source: "https://blog.naver.com/inxs2011/224367245366",
+    kakaoUrl: "http://place.map.kakao.com/1885380713",
   },
   {
     id: "daejeon-04",
@@ -595,6 +616,7 @@ export const roasteries: Roastery[] = [
     lat: 36.3529277431724,
     lng: 127.388784846816,
     source: "https://blog.naver.com/first_seogu/224236759739",
+    kakaoUrl: "http://place.map.kakao.com/479886714",
   },
   {
     id: "daejeon-05",
@@ -610,6 +632,7 @@ export const roasteries: Roastery[] = [
     lat: 36.3872585615835,
     lng: 127.309640095406,
     source: "https://blog.naver.com/gusrud3v3/224369071738",
+    kakaoUrl: "http://place.map.kakao.com/1971429923",
   },
   {
     id: "daegu-01",
@@ -625,6 +648,7 @@ export const roasteries: Roastery[] = [
     lat: 35.8640339659234,
     lng: 128.607956786736,
     source: "https://blog.naver.com/sua3067/224334470316",
+    kakaoUrl: "http://place.map.kakao.com/1480240588",
   },
   {
     id: "daegu-04",
@@ -640,6 +664,7 @@ export const roasteries: Roastery[] = [
     lat: 35.8687988652891,
     lng: 128.599410845886,
     source: "https://blog.naver.com/u_ellie/224243990800",
+    kakaoUrl: "http://place.map.kakao.com/895031452",
   },
   {
     id: "daegu-06",
@@ -655,6 +680,7 @@ export const roasteries: Roastery[] = [
     lat: 35.832681395758506,
     lng: 128.60855992243307,
     source: "https://blog.naver.com/kindpetit330/224317343466",
+    kakaoUrl: "http://place.map.kakao.com/889480024",
   },
   {
     id: "seoul-19",
@@ -670,6 +696,7 @@ export const roasteries: Roastery[] = [
     lat: 37.54875221639669,
     lng: 127.04589900708892,
     source: "https://blog.naver.com/onaive/224317015449",
+    kakaoUrl: "http://place.map.kakao.com/1904529538",
   },
   {
     id: "seoul-20",
@@ -685,6 +712,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5502821153395,
     lng: 127.050313401223,
     source: "https://bctrip.tistory.com/354",
+    kakaoUrl: "http://place.map.kakao.com/534239541",
   },
   {
     id: "seoul-23",
@@ -700,6 +728,7 @@ export const roasteries: Roastery[] = [
     lat: 37.54894419737118,
     lng: 126.9244497725609,
     source: "https://blog.naver.com/shrewd/224315866171",
+    kakaoUrl: "http://place.map.kakao.com/1652141411",
   },
   {
     id: "jeju-12",
@@ -715,6 +744,7 @@ export const roasteries: Roastery[] = [
     lat: 33.49856726524624,
     lng: 126.52867106179917,
     source: "https://blog.naver.com/513joanna/224294722194",
+    kakaoUrl: "http://place.map.kakao.com/1505002027",
   },
   {
     id: "jeju-13",
@@ -730,6 +760,7 @@ export const roasteries: Roastery[] = [
     lat: 33.272294301337155,
     lng: 126.67655338473118,
     source: "https://blog.naver.com/tree824/222679612290",
+    kakaoUrl: "http://place.map.kakao.com/18815393",
   },
   {
     id: "jeju-15",
@@ -745,6 +776,7 @@ export const roasteries: Roastery[] = [
     lat: 33.295585469029824,
     lng: 126.2178868871938,
     source: "https://blog.naver.com/malang_e493/224349201214",
+    kakaoUrl: "http://place.map.kakao.com/2036344906",
   },
   {
     id: "jeju-16",
@@ -760,6 +792,7 @@ export const roasteries: Roastery[] = [
     lat: 33.4508137371069,
     lng: 126.345977552667,
     source: "https://blog.naver.com/skdisk22/224328636349",
+    kakaoUrl: "http://place.map.kakao.com/1121041467",
   },
   {
     id: "jeju-17",
@@ -775,6 +808,7 @@ export const roasteries: Roastery[] = [
     lat: 33.55021726635341,
     lng: 126.69477444538903,
     source: "https://blog.naver.com/kbc810/224302852166",
+    kakaoUrl: "http://place.map.kakao.com/1491888881",
   },
   {
     id: "gwangju-11",
@@ -785,12 +819,12 @@ export const roasteries: Roastery[] = [
     address: "전남광주통합특별시 동구 문화전당로 38",
     hours: "확인 필요",
     tags: ["진정성브랜드", "ACC", "핸드드립"],
-    description:
-      "국립아시아문화전당(ACC) 안에 위치한 스페셜티 커피 브랜드 진정성의 광주 매장. 진정성은 핸드드립·필터 커피로 잘 알려진 브랜드로, 밀크티 같은 시그니처 음료도 함께 낸다.",
+    description: "국립아시아문화전당(ACC) 안에 위치한 스페셜티 커피 브랜드 진정성의 광주 매장. 진정성은 핸드드립·필터 커피로 잘 알려진 브랜드로, 밀크티 같은 시그니처 음료도 함께 낸다.",
     signature: ["핸드드립 커피", "밀크티"],
     lat: 35.1470570338012,
     lng: 126.920031435214,
     source: "https://blog.naver.com/dlwnsrms89/224284916615",
+    kakaoUrl: "http://place.map.kakao.com/1155250748",
   },
   {
     id: "daejeon-11",
@@ -806,6 +840,7 @@ export const roasteries: Roastery[] = [
     lat: 36.3938348510241,
     lng: 127.405780733577,
     source: "https://blog.naver.com/euna_25/224343054260",
+    kakaoUrl: "http://place.map.kakao.com/883071759",
   },
   {
     id: "daejeon-12",
@@ -821,6 +856,7 @@ export const roasteries: Roastery[] = [
     lat: 36.35372862314345,
     lng: 127.37734162638445,
     source: "https://tourbook.tistory.com/2248",
+    kakaoUrl: "http://place.map.kakao.com/24119363",
   },
   {
     id: "daejeon-13",
@@ -836,6 +872,7 @@ export const roasteries: Roastery[] = [
     lat: 36.3281374996557,
     lng: 127.42346644265,
     source: "https://blog.naver.com/aupu_aupu/224319943291",
+    kakaoUrl: "http://place.map.kakao.com/1066483856",
   },
   {
     id: "daegu-07",
@@ -851,6 +888,7 @@ export const roasteries: Roastery[] = [
     lat: 35.86058740809871,
     lng: 128.62214211814555,
     source: "https://blog.naver.com/sleh2010/224371813131",
+    kakaoUrl: "http://place.map.kakao.com/19713278",
   },
   {
     id: "daegu-08",
@@ -866,6 +904,7 @@ export const roasteries: Roastery[] = [
     lat: 35.8679081132169,
     lng: 128.611845748334,
     source: "https://blog.naver.com/saecomi/224324471961",
+    kakaoUrl: "http://place.map.kakao.com/147076660",
   },
   {
     id: "daegu-09",
@@ -881,6 +920,7 @@ export const roasteries: Roastery[] = [
     lat: 35.8657943156888,
     lng: 128.602058386486,
     source: "https://blog.naver.com/tgs05137/224349661299",
+    kakaoUrl: "http://place.map.kakao.com/1084194239",
   },
   {
     id: "seoul-24",
@@ -896,6 +936,7 @@ export const roasteries: Roastery[] = [
     lat: 37.6191179431773,
     lng: 126.917571308577,
     source: "https://blog.naver.com/jhj3725/224343146085",
+    kakaoUrl: "http://place.map.kakao.com/1994915181",
   },
   {
     id: "seoul-25",
@@ -911,6 +952,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5483779718343,
     lng: 127.053132134763,
     source: "https://blog.naver.com/ajung8904/224045341639",
+    kakaoUrl: "http://place.map.kakao.com/1377610692",
   },
   {
     id: "seoul-26",
@@ -926,6 +968,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5587837704334,
     lng: 126.996011593008,
     source: "https://blog.naver.com/ssongji337/224356594635",
+    kakaoUrl: "http://place.map.kakao.com/2102801120",
   },
   {
     id: "seoul-27",
@@ -941,6 +984,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5709805434398,
     lng: 126.97892048108426,
     source: "https://blog.naver.com/sara4349/224300873833",
+    kakaoUrl: "http://place.map.kakao.com/977211586",
   },
   {
     id: "seoul-28",
@@ -956,6 +1000,7 @@ export const roasteries: Roastery[] = [
     lat: 37.52949345884314,
     lng: 127.12185109538237,
     source: "https://blog.naver.com/orangesirena/224314651881",
+    kakaoUrl: "http://place.map.kakao.com/19163279",
   },
   {
     id: "seoul-29",
@@ -971,6 +1016,7 @@ export const roasteries: Roastery[] = [
     lat: 37.52578879307758,
     lng: 126.96284858832676,
     source: "https://blog.naver.com/makeitcount_/224337771123",
+    kakaoUrl: "http://place.map.kakao.com/272529762",
   },
   {
     id: "seoul-30",
@@ -1001,6 +1047,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5554087009247,
     lng: 126.917485354012,
     source: "https://blog.naver.com/fascinoya/223711562708",
+    kakaoUrl: "http://place.map.kakao.com/857920937",
   },
   {
     id: "seoul-32",
@@ -1016,6 +1063,7 @@ export const roasteries: Roastery[] = [
     lat: 37.55581612205953,
     lng: 126.90568086892758,
     source: "https://blog.naver.com/ahrfus202/222803471964",
+    kakaoUrl: "http://place.map.kakao.com/27481601",
   },
   {
     id: "seoul-33",
@@ -1031,6 +1079,7 @@ export const roasteries: Roastery[] = [
     lat: 37.4767324641599,
     lng: 126.9652764258,
     source: "https://blog.naver.com/pawnandqueen/223767767650",
+    kakaoUrl: "http://place.map.kakao.com/877628364",
   },
   {
     id: "jeju-06",
@@ -1041,12 +1090,12 @@ export const roasteries: Roastery[] = [
     address: "제주 서귀포시 서호중앙로 85-13",
     hours: "확인 필요",
     tags: ["핸드드립", "언스페셜티월픽", "필터커피성지"],
-    description:
-      "서귀포 필터커피 성지순례 코스에 자주 꼽히는 로스터리. 핸드드립으로 내려주는 원두 맛집으로 알려져 있다.",
+    description: "서귀포 필터커피 성지순례 코스에 자주 꼽히는 로스터리. 핸드드립으로 내려주는 원두 맛집으로 알려져 있다.",
     signature: ["핸드드립 커피"],
     lat: 33.25494789535019,
     lng: 126.51814130500335,
     source: "https://blog.naver.com/koreanton/221486029858",
+    kakaoUrl: "http://place.map.kakao.com/767876049",
   },
   {
     id: "jeju-18",
@@ -1062,6 +1111,7 @@ export const roasteries: Roastery[] = [
     lat: 33.5134554514587,
     lng: 126.5282513091222,
     source: "https://blog.naver.com/wjdtoquf/224106346449",
+    kakaoUrl: "http://place.map.kakao.com/2006695291",
   },
 ];
 
