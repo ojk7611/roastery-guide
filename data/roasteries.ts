@@ -1170,3 +1170,21 @@ export function getRoasteriesByRegion(region: string) {
 export function getRoastery(region: string, slug: string) {
   return roasteries.find((r) => r.region === region && r.slug === slug);
 }
+
+export function searchRoasteries(query: string) {
+  const q = query.trim().toLowerCase();
+  if (!q) return [];
+
+  return roasteries.filter((r) => {
+    const haystack = [
+      r.name,
+      r.neighborhood,
+      r.description,
+      ...r.tags,
+      ...r.signature,
+    ]
+      .join(" ")
+      .toLowerCase();
+    return haystack.includes(q);
+  });
+}
