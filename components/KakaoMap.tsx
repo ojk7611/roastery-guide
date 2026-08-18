@@ -26,22 +26,35 @@ export default function KakaoMap({
 
   // Client-side navigation reuses the already-inserted <script> tag, so
   // next/script's onLoad won't fire again on remount — poll for it instead.
+  // Also keep polling if the SDK ever appears "loaded" but window.kakao
+  // is missing (e.g. onLoad fired before the domain check finished and
+  // Kakao tore the global back down) so the map can self-recover.
   useEffect(() => {
-    if (sdkLoaded) return;
+    if (sdkLoaded && window.kakao?.maps) return;
     const id = setInterval(() => {
       if (window.kakao?.maps) {
         setSdkLoaded(true);
         clearInterval(id);
+      } else if (sdkLoaded) {
+        setSdkLoaded(false);
       }
     }, 100);
     return () => clearInterval(id);
   }, [sdkLoaded]);
 
   useEffect(() => {
-    if (!sdkLoaded || !containerRef.current || markers.length === 0) return;
+    if (
+      !sdkLoaded ||
+      !window.kakao?.maps ||
+      !containerRef.current ||
+      markers.length === 0
+    ) {
+      return;
+    }
 
     window.kakao.maps.load(() => {
       const { kakao } = window;
+      if (!kakao?.maps || !containerRef.current) return;
       const center = new kakao.maps.LatLng(markers[0].lat, markers[0].lng);
       const map = new kakao.maps.Map(containerRef.current, {
         center,
