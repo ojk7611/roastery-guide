@@ -2522,6 +2522,22 @@ export const roasteries: Roastery[] = [
     source: "https://blog.naver.com/dhdbrud264/224335758386",
     kakaoUrl: "http://place.map.kakao.com/1606863361",
   },
+  {
+    id: "jeju-35",
+    slug: "kieki-coffee-stand",
+    name: "키에키 커피 스탠드",
+    region: "jeju",
+    neighborhood: "화북동(제주시)",
+    address: "제주특별자치도 제주시 진서로 32 1층",
+    hours: "매일 08:00 - 17:00",
+    tags: ["핸드드립", "제주공항", "호주식커피"],
+    description: "제주공항 근처 화북동의 로스터리 카페로, 호주식 커피와 함께 핸드드립 커피로도 알려져 있다.",
+    signature: ["핸드드립 커피"],
+    lat: 33.5214090464278,
+    lng: 126.563092652582,
+    source: "https://blog.naver.com/s_ziu/223740918430",
+    kakaoUrl: "http://place.map.kakao.com/1664722329",
+  },
 ];
 
 export function getRoasteriesByRegion(region: string) {
