@@ -1,8 +1,29 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getRegion } from "@/lib/regions";
 import { getRoasteriesByRegion } from "@/data/roasteries";
 import RoasteryCard from "@/components/RoasteryCard";
 import KakaoMap from "@/components/KakaoMap";
+
+export async function generateMetadata(
+  props: PageProps<"/[region]">,
+): Promise<Metadata> {
+  const { region: regionSlug } = await props.params;
+  const region = getRegion(regionSlug);
+  if (!region) return {};
+
+  const count = getRoasteriesByRegion(region.slug).length;
+  const title = `${region.label} 로스터리 카페 ${count}곳`;
+  const description = `${region.description} ${region.label} 지역 핸드드립·필터커피 로스터리 카페 ${count}곳을 위치, 영업시간, 시그니처 메뉴와 함께 모았습니다.`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: `/${region.slug}` },
+    openGraph: { title, description, url: `/${region.slug}` },
+    twitter: { title, description },
+  };
+}
 
 export default async function RegionPage(props: PageProps<"/[region]">) {
   const { region: regionSlug } = await props.params;

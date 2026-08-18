@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,10 +15,32 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const TITLE = "요새여기 - 로스터리 카페 가이드 | 전국 스페셜티 커피";
+const DESCRIPTION =
+  "서울・부산・제주・인천・강원・경기 등 전국 스페셜티 로스터리 카페를 지역별로 모아보는 가이드, 요새여기. 핸드드립·필터커피가 확인된 곳만 소개합니다.";
+
 export const metadata: Metadata = {
-  title: "요새여기 - 로스터리 카페 가이드 | 전국 스페셜티 커피",
-  description:
-    "서울・부산・제주・전남광주통합특별시・대전・대구의 스페셜티 로스터리 카페를 지역별로 모아보는 가이드, 요새여기.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: TITLE,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: DESCRIPTION,
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    locale: "ko_KR",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/",
+    images: ["/brand/flower-mark.png"],
+  },
+  twitter: {
+    card: "summary",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/brand/flower-mark.png"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
