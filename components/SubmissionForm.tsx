@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import StarRatingInput from "./StarRatingInput";
 
 export default function SubmissionForm({
   roasterySlug,
@@ -63,6 +64,10 @@ export default function SubmissionForm({
       </p>
 
       <div className="mt-4 space-y-3">
+        <div>
+          <p className="mb-1.5 text-xs text-foreground/50">별점 (선택)</p>
+          <StarRatingInput />
+        </div>
         <input
           type="text"
           name="authorName"

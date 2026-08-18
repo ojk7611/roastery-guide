@@ -4,6 +4,7 @@ import { isAdmin } from "@/lib/admin-auth";
 import { getPendingSubmissions } from "@/lib/db";
 import { roasteries } from "@/data/roasteries";
 import { approve, reject, logout } from "@/app/admin/actions";
+import StarRating from "@/components/StarRating";
 
 export default async function AdminPage() {
   if (!(await isAdmin())) {
@@ -46,6 +47,12 @@ export default async function AdminPage() {
                   · {s.authorName ?? "익명"}
                 </span>
               </p>
+
+              {s.rating !== null && (
+                <div className="mt-2">
+                  <StarRating value={s.rating} size="md" />
+                </div>
+              )}
 
               {s.reviewText && (
                 <p className="mt-2 text-sm text-foreground/80">

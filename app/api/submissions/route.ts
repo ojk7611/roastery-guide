@@ -19,6 +19,7 @@ export async function POST(request: NextRequest) {
   const authorName = formData.get("authorName");
   const reviewText = formData.get("reviewText");
   const photo = formData.get("photo");
+  const ratingRaw = formData.get("rating");
 
   if (typeof roasterySlug !== "string" || !roasteries.some((r) => r.slug === roasterySlug)) {
     return NextResponse.json({ error: "잘못된 로스터리입니다." }, { status: 400 });
@@ -29,11 +30,20 @@ export async function POST(request: NextRequest) {
   const trimmedAuthor =
     typeof authorName === "string" && authorName.trim() ? authorName.trim().slice(0, 40) : null;
 
+  let rating: number | null = null;
+  if (typeof ratingRaw === "string" && ratingRaw.trim()) {
+    const parsed = Number(ratingRaw);
+    if (!Number.isInteger(parsed) || parsed < 1 || parsed > 5) {
+      return NextResponse.json({ error: "별점은 1~5 사이여야 해요." }, { status: 400 });
+    }
+    rating = parsed;
+  }
+
   const hasPhoto = photo instanceof File && photo.size > 0;
 
-  if (!trimmedReview && !hasPhoto) {
+  if (!trimmedReview && !hasPhoto && !rating) {
     return NextResponse.json(
-      { error: "후기 또는 사진 중 하나는 입력해주세요." },
+      { error: "후기, 사진, 별점 중 하나는 입력해주세요." },
       { status: 400 },
     );
   }
@@ -70,6 +80,7 @@ export async function POST(request: NextRequest) {
     authorName: trimmedAuthor,
     reviewText: trimmedReview,
     photoUrl,
+    rating,
   });
 
   return NextResponse.json({ ok: true });

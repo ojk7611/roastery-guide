@@ -6,6 +6,7 @@ export interface Submission {
   authorName: string | null;
   reviewText: string | null;
   photoUrl: string | null;
+  rating: number | null;
   status: "pending" | "approved" | "rejected";
   createdAt: string;
 }
@@ -26,17 +27,23 @@ let schemaReady: Promise<void> | null = null;
 
 async function ensureSchema(sql: NonNullable<ReturnType<typeof getSql>>) {
   if (!schemaReady) {
-    schemaReady = sql`
-      CREATE TABLE IF NOT EXISTS submissions (
-        id SERIAL PRIMARY KEY,
-        roastery_slug TEXT NOT NULL,
-        author_name TEXT,
-        review_text TEXT,
-        photo_url TEXT,
-        status TEXT NOT NULL DEFAULT 'pending',
-        created_at TIMESTAMPTZ NOT NULL DEFAULT now()
-      )
-    `.then(() => undefined);
+    schemaReady = (async () => {
+      await sql`
+        CREATE TABLE IF NOT EXISTS submissions (
+          id SERIAL PRIMARY KEY,
+          roastery_slug TEXT NOT NULL,
+          author_name TEXT,
+          review_text TEXT,
+          photo_url TEXT,
+          status TEXT NOT NULL DEFAULT 'pending',
+          created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+        )
+      `;
+      // 기존 테이블에는 rating 컬럼이 없을 수 있으므로 별도 마이그레이션.
+      await sql`
+        ALTER TABLE submissions ADD COLUMN IF NOT EXISTS rating SMALLINT
+      `;
+    })();
   }
   await schemaReady;
 }
@@ -48,6 +55,7 @@ function mapRow(row: Record<string, unknown>): Submission {
     authorName: row.author_name as string | null,
     reviewText: row.review_text as string | null,
     photoUrl: row.photo_url as string | null,
+    rating: row.rating as number | null,
     status: row.status as Submission["status"],
     createdAt: row.created_at as string,
   };
@@ -58,14 +66,15 @@ export async function insertSubmission(input: {
   authorName: string | null;
   reviewText: string | null;
   photoUrl: string | null;
+  rating: number | null;
 }) {
   const sql = getSql();
   if (!sql) throw new Error("DATABASE_URL이 설정되지 않았습니다.");
   await ensureSchema(sql);
 
   await sql`
-    INSERT INTO submissions (roastery_slug, author_name, review_text, photo_url, status)
-    VALUES (${input.roasterySlug}, ${input.authorName}, ${input.reviewText}, ${input.photoUrl}, 'pending')
+    INSERT INTO submissions (roastery_slug, author_name, review_text, photo_url, rating, status)
+    VALUES (${input.roasterySlug}, ${input.authorName}, ${input.reviewText}, ${input.photoUrl}, ${input.rating}, 'pending')
   `;
 }
 
