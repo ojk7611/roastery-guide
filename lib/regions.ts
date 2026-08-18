@@ -18,13 +18,8 @@ export const regions: RegionMeta[] = [
   },
   {
     slug: "gwangju",
-    label: "전남광주통합특별시",
+    label: "광주",
     description: "동명동・충장로를 중심으로 성장하는 호남권 커피 씬",
-  },
-  {
-    slug: "daejeon",
-    label: "대전",
-    description: "대흥동・둔산동 일대의 로스터리 카페",
   },
   {
     slug: "daegu",
@@ -32,34 +27,39 @@ export const regions: RegionMeta[] = [
     description: "동성로・삼덕동・수성못 인근 로스터리 카페",
   },
   {
+    slug: "daejeon",
+    label: "대전",
+    description: "대흥동・둔산동 일대의 로스터리 카페",
+  },
+  {
     slug: "incheon",
     label: "인천",
     description: "송도・개항로 일대에서 자라나는 항구도시 커피 씬",
   },
   {
-    slug: "gangwon",
-    label: "강원특별자치도",
-    description: "안목해변・속초를 중심으로 한 커피 여행지",
-  },
-  {
     slug: "gyeonggi",
-    label: "경기도",
+    label: "경기",
     description: "수원・성남・일산 등 수도권 곳곳의 로스터리",
   },
   {
-    slug: "gyeongsang",
-    label: "경상권",
-    description: "울산・창원・경주 등 영남 지역 곳곳의 로스터리",
-  },
-  {
-    slug: "jeolla",
-    label: "전라권",
-    description: "전주・군산 등 호남 내륙의 로스터리 카페",
+    slug: "gangwon",
+    label: "강원",
+    description: "안목해변・속초를 중심으로 한 커피 여행지",
   },
   {
     slug: "chungcheong",
-    label: "충청권",
+    label: "충청",
     description: "천안・청주・세종 등 충청 지역의 로스터리",
+  },
+  {
+    slug: "jeolla",
+    label: "전라",
+    description: "전주・군산 등 호남 내륙의 로스터리 카페",
+  },
+  {
+    slug: "gyeongsang",
+    label: "경상",
+    description: "울산・창원・경주 등 영남 지역 곳곳의 로스터리",
   },
 ];
 
