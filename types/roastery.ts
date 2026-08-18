@@ -1,4 +1,16 @@
-export type Region = "seoul" | "busan" | "jeju" | "gwangju" | "daejeon" | "daegu";
+export type Region =
+  | "seoul"
+  | "busan"
+  | "jeju"
+  | "gwangju"
+  | "daejeon"
+  | "daegu"
+  | "incheon"
+  | "gangwon"
+  | "gyeonggi"
+  | "gyeongsang"
+  | "jeolla"
+  | "chungcheong";
 
 export interface RegionMeta {
   slug: Region;
