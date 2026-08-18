@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     images: ["/brand/flower-mark.png"],
   },
+  verification: {
+    google: "Tw7H1Q7VIxb-pzkRcdpLF_qISNQaOrj1DgqEcz944nc",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
