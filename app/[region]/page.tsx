@@ -4,6 +4,7 @@ import { getRegion } from "@/lib/regions";
 import { getRoasteriesByRegion } from "@/data/roasteries";
 import RoasteryCard from "@/components/RoasteryCard";
 import KakaoMap from "@/components/KakaoMap";
+import { getPrimaryPhotoMap } from "@/lib/db";
 
 export async function generateMetadata(
   props: PageProps<"/[region]">,
@@ -34,6 +35,7 @@ export default async function RegionPage(props: PageProps<"/[region]">) {
   }
 
   const roasteries = getRoasteriesByRegion(region.slug);
+  const primaryPhotoMap = await getPrimaryPhotoMap();
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
@@ -54,7 +56,11 @@ export default async function RegionPage(props: PageProps<"/[region]">) {
 
       <div className="mt-10 grid gap-4 sm:grid-cols-2">
         {roasteries.map((roastery) => (
-          <RoasteryCard key={roastery.id} roastery={roastery} />
+          <RoasteryCard
+            key={roastery.id}
+            roastery={roastery}
+            photoOverrideUrl={primaryPhotoMap[roastery.slug] ?? null}
+          />
         ))}
       </div>
     </div>

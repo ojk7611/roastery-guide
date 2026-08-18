@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { isAdmin } from "@/lib/admin-auth";
 import { getPendingSubmissions } from "@/lib/db";
 import { roasteries } from "@/data/roasteries";
-import { approve, reject, logout } from "@/app/admin/actions";
+import { approve, reject, logout, makePrimaryPhoto } from "@/app/admin/actions";
 import StarRating from "@/components/StarRating";
 
 export default async function AdminPage() {
@@ -70,6 +70,18 @@ export default async function AdminPage() {
                     className="object-cover"
                   />
                 </div>
+              )}
+
+              {s.photoUrl && (
+                <form action={makePrimaryPhoto.bind(null, s.id, s.roasterySlug)}>
+                  <button
+                    type="submit"
+                    disabled={s.isPrimaryPhoto}
+                    className="mt-2 rounded-full bg-black/5 px-3 py-1.5 text-xs text-foreground/70 disabled:opacity-50 dark:bg-white/10"
+                  >
+                    {s.isPrimaryPhoto ? "대표 사진으로 지정됨" : "대표 사진으로 지정"}
+                  </button>
+                </form>
               )}
 
               <div className="mt-3 flex gap-2">

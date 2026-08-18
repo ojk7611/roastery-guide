@@ -3,8 +3,9 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { setSubmissionStatus } from "@/lib/db";
+import { setSubmissionStatus, setPrimaryPhoto } from "@/lib/db";
 import { ADMIN_COOKIE_NAME } from "@/lib/admin-auth";
+import { roasteries } from "@/data/roasteries";
 
 export async function login(formData: FormData) {
   const password = formData.get("password");
@@ -39,4 +40,16 @@ export async function approve(id: number) {
 export async function reject(id: number) {
   await setSubmissionStatus(id, "rejected");
   revalidatePath("/admin");
+}
+
+export async function makePrimaryPhoto(id: number, roasterySlug: string) {
+  await setPrimaryPhoto(id, roasterySlug);
+
+  const roastery = roasteries.find((r) => r.slug === roasterySlug);
+  revalidatePath("/admin");
+  revalidatePath("/search");
+  if (roastery) {
+    revalidatePath(`/${roastery.region}`);
+    revalidatePath(`/${roastery.region}/${roastery.slug}`);
+  }
 }

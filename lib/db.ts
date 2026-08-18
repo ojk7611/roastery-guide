@@ -8,6 +8,7 @@ export interface Submission {
   photoUrl: string | null;
   rating: number | null;
   status: "pending" | "approved" | "rejected";
+  isPrimaryPhoto: boolean;
   createdAt: string;
 }
 
@@ -43,6 +44,9 @@ async function ensureSchema(sql: NonNullable<ReturnType<typeof getSql>>) {
       await sql`
         ALTER TABLE submissions ADD COLUMN IF NOT EXISTS rating SMALLINT
       `;
+      await sql`
+        ALTER TABLE submissions ADD COLUMN IF NOT EXISTS is_primary_photo BOOLEAN NOT NULL DEFAULT false
+      `;
     })();
   }
   await schemaReady;
@@ -57,6 +61,7 @@ function mapRow(row: Record<string, unknown>): Submission {
     photoUrl: row.photo_url as string | null,
     rating: row.rating as number | null,
     status: row.status as Submission["status"],
+    isPrimaryPhoto: row.is_primary_photo as boolean,
     createdAt: row.created_at as string,
   };
 }
@@ -115,6 +120,52 @@ export async function setSubmissionStatus(
   await ensureSchema(sql);
 
   await sql`UPDATE submissions SET status = ${status} WHERE id = ${id}`;
+}
+
+export async function setPrimaryPhoto(id: number, roasterySlug: string) {
+  const sql = getSql();
+  if (!sql) throw new Error("DATABASE_URL이 설정되지 않았습니다.");
+  await ensureSchema(sql);
+
+  await sql`
+    UPDATE submissions SET is_primary_photo = false
+    WHERE roastery_slug = ${roasterySlug} AND is_primary_photo = true
+  `;
+  await sql`
+    UPDATE submissions SET is_primary_photo = true, status = 'approved'
+    WHERE id = ${id}
+  `;
+}
+
+export async function getPrimaryPhotoMap(): Promise<Record<string, string>> {
+  const sql = getSql();
+  if (!sql) return {};
+  await ensureSchema(sql);
+
+  const rows = await sql`
+    SELECT roastery_slug, photo_url FROM submissions
+    WHERE is_primary_photo = true AND status = 'approved' AND photo_url IS NOT NULL
+  `;
+  const map: Record<string, string> = {};
+  for (const row of rows) {
+    map[row.roastery_slug as string] = row.photo_url as string;
+  }
+  return map;
+}
+
+export async function getPrimaryPhotoUrl(
+  roasterySlug: string,
+): Promise<string | null> {
+  const sql = getSql();
+  if (!sql) return null;
+  await ensureSchema(sql);
+
+  const rows = await sql`
+    SELECT photo_url FROM submissions
+    WHERE roastery_slug = ${roasterySlug} AND is_primary_photo = true AND status = 'approved' AND photo_url IS NOT NULL
+    LIMIT 1
+  `;
+  return rows.length > 0 ? (rows[0].photo_url as string) : null;
 }
 
 export function isDbConfigured() {

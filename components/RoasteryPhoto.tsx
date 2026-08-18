@@ -24,11 +24,27 @@ export default function RoasteryPhoto({
   slug,
   name,
   className,
+  overrideUrl,
 }: {
   slug: string;
   name: string;
   className?: string;
+  overrideUrl?: string | null;
 }) {
+  if (overrideUrl) {
+    return (
+      <div className={`relative overflow-hidden rounded-xl ${className ?? ""}`}>
+        <Image
+          src={overrideUrl}
+          alt={name}
+          fill
+          sizes="(min-width: 640px) 400px, 100vw"
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+
   const photoPath = path.join(process.cwd(), "public", "photos", `${slug}.jpg`);
   const hasPhoto = existsSync(photoPath);
 

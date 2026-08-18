@@ -5,14 +5,20 @@ import { notFound } from "next/navigation";
 import { getRegion } from "@/lib/regions";
 import { getRoastery } from "@/data/roasteries";
 import { SITE_URL } from "@/lib/site";
+import { getPrimaryPhotoUrl } from "@/lib/db";
 import KakaoMap from "@/components/KakaoMap";
 import RoasteryPhoto from "@/components/RoasteryPhoto";
 import RoasteryReviews from "@/components/RoasteryReviews";
 import SubmissionForm from "@/components/SubmissionForm";
 
-function photoUrl(slug: string) {
+function localPhotoUrl(slug: string) {
   const photoPath = path.join(process.cwd(), "public", "photos", `${slug}.jpg`);
   return existsSync(photoPath) ? `/photos/${slug}.jpg` : "/brand/flower-mark.png";
+}
+
+async function photoUrl(slug: string) {
+  const primary = await getPrimaryPhotoUrl(slug);
+  return primary ?? localPhotoUrl(slug);
 }
 
 export async function generateMetadata(
@@ -26,7 +32,7 @@ export async function generateMetadata(
   const title = `${roastery.name} - ${region.label} ${roastery.neighborhood}`;
   const description = `${roastery.description} 주소: ${roastery.address}. 영업시간: ${roastery.hours}.`;
   const url = `/${region.slug}/${roastery.slug}`;
-  const image = photoUrl(roastery.slug);
+  const image = await photoUrl(roastery.slug);
 
   return {
     title,
@@ -48,12 +54,15 @@ export default async function RoasteryPage(
     notFound();
   }
 
+  const primaryPhotoUrl = await getPrimaryPhotoUrl(roastery.slug);
+  const image = primaryPhotoUrl ?? `${SITE_URL}${localPhotoUrl(roastery.slug)}`;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CafeOrCoffeeShop",
     name: roastery.name,
     description: roastery.description,
-    image: `${SITE_URL}${photoUrl(roastery.slug)}`,
+    image,
     url: `${SITE_URL}/${region.slug}/${roastery.slug}`,
     address: {
       "@type": "PostalAddress",
@@ -87,6 +96,7 @@ export default async function RoasteryPage(
           slug={roastery.slug}
           name={roastery.name}
           className="relative mt-6 h-64 w-full"
+          overrideUrl={primaryPhotoUrl}
         />
 
         {(() => {

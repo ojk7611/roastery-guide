@@ -2,11 +2,13 @@ import Link from "next/link";
 import { searchRoasteries } from "@/data/roasteries";
 import { getRegion } from "@/lib/regions";
 import RoasteryCard from "@/components/RoasteryCard";
+import { getPrimaryPhotoMap } from "@/lib/db";
 
 export default async function SearchPage(props: PageProps<"/search">) {
   const { q } = await props.searchParams;
   const query = typeof q === "string" ? q : "";
   const results = searchRoasteries(query);
+  const primaryPhotoMap = await getPrimaryPhotoMap();
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
@@ -31,7 +33,10 @@ export default async function SearchPage(props: PageProps<"/search">) {
             <p className="mb-1 text-xs text-foreground/40">
               {getRegion(roastery.region)?.label}
             </p>
-            <RoasteryCard roastery={roastery} />
+            <RoasteryCard
+              roastery={roastery}
+              photoOverrideUrl={primaryPhotoMap[roastery.slug] ?? null}
+            />
           </div>
         ))}
       </div>

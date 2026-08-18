@@ -2,7 +2,13 @@ import Link from "next/link";
 import type { Roastery } from "@/types/roastery";
 import RoasteryPhoto from "@/components/RoasteryPhoto";
 
-export default function RoasteryCard({ roastery }: { roastery: Roastery }) {
+export default function RoasteryCard({
+  roastery,
+  photoOverrideUrl,
+}: {
+  roastery: Roastery;
+  photoOverrideUrl?: string | null;
+}) {
   return (
     <Link
       href={`/${roastery.region}/${roastery.slug}`}
@@ -12,6 +18,7 @@ export default function RoasteryCard({ roastery }: { roastery: Roastery }) {
         slug={roastery.slug}
         name={roastery.name}
         className="relative -mx-5 -mt-5 mb-4 h-36"
+        overrideUrl={photoOverrideUrl}
       />
       <p className="text-xs text-foreground/50">{roastery.neighborhood}</p>
       <h3 className="mt-1 text-lg font-semibold">{roastery.name}</h3>
