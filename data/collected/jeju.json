@@ -14,7 +14,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.346Z"
+    "collectedAt": "2026-08-18T00:32:17.555Z"
   },
   {
     "region": "jeju",
@@ -31,7 +31,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.348Z"
+    "collectedAt": "2026-08-18T00:32:17.558Z"
   },
   {
     "region": "jeju",
@@ -48,7 +48,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.348Z"
+    "collectedAt": "2026-08-18T00:32:17.558Z"
   },
   {
     "region": "jeju",
@@ -65,7 +65,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.348Z"
+    "collectedAt": "2026-08-18T00:32:17.558Z"
   },
   {
     "region": "jeju",
@@ -82,24 +82,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.348Z"
-  },
-  {
-    "region": "jeju",
-    "neighborhood": "애월",
-    "name": "웨스트비치",
-    "category": "음식점 > 카페",
-    "address": "제주특별자치도 제주시 애월읍 곽지리 1551",
-    "roadAddress": "제주특별자치도 제주시 애월읍 일주서로 6083",
-    "lat": 33.45433197570013,
-    "lng": 126.30766402989894,
-    "phone": "010-3932-2452",
-    "sourceLink": "http://place.map.kakao.com/304276252",
-    "blogExcerpt": null,
-    "blogSource": null,
-    "hours": null,
-    "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.348Z"
+    "collectedAt": "2026-08-18T00:32:17.558Z"
   },
   {
     "region": "jeju",
@@ -116,7 +99,24 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.348Z"
+    "collectedAt": "2026-08-18T00:32:17.558Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "애월",
+    "name": "웨스트비치",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 제주시 애월읍 곽지리 1551",
+    "roadAddress": "제주특별자치도 제주시 애월읍 일주서로 6083",
+    "lat": 33.45433197570013,
+    "lng": 126.30766402989894,
+    "phone": "010-3932-2452",
+    "sourceLink": "http://place.map.kakao.com/304276252",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:17.558Z"
   },
   {
     "region": "jeju",
@@ -133,7 +133,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.348Z"
+    "collectedAt": "2026-08-18T00:32:17.558Z"
   },
   {
     "region": "jeju",
@@ -150,7 +150,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.348Z"
+    "collectedAt": "2026-08-18T00:32:17.558Z"
   },
   {
     "region": "jeju",
@@ -167,7 +167,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.348Z"
+    "collectedAt": "2026-08-18T00:32:17.558Z"
   },
   {
     "region": "jeju",
@@ -184,7 +184,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.348Z"
+    "collectedAt": "2026-08-18T00:32:17.558Z"
   },
   {
     "region": "jeju",
@@ -201,7 +201,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.348Z"
+    "collectedAt": "2026-08-18T00:32:17.558Z"
   },
   {
     "region": "jeju",
@@ -218,7 +218,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.348Z"
+    "collectedAt": "2026-08-18T00:32:17.558Z"
   },
   {
     "region": "jeju",
@@ -235,7 +235,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.348Z"
+    "collectedAt": "2026-08-18T00:32:17.558Z"
   },
   {
     "region": "jeju",
@@ -252,7 +252,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.626Z"
+    "collectedAt": "2026-08-18T00:32:17.883Z"
   },
   {
     "region": "jeju",
@@ -269,7 +269,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.626Z"
+    "collectedAt": "2026-08-18T00:32:17.883Z"
   },
   {
     "region": "jeju",
@@ -286,7 +286,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.626Z"
+    "collectedAt": "2026-08-18T00:32:17.883Z"
   },
   {
     "region": "jeju",
@@ -303,7 +303,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.626Z"
+    "collectedAt": "2026-08-18T00:32:17.883Z"
   },
   {
     "region": "jeju",
@@ -320,7 +320,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.626Z"
+    "collectedAt": "2026-08-18T00:32:17.883Z"
   },
   {
     "region": "jeju",
@@ -337,7 +337,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.626Z"
+    "collectedAt": "2026-08-18T00:32:17.883Z"
   },
   {
     "region": "jeju",
@@ -354,7 +354,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.626Z"
+    "collectedAt": "2026-08-18T00:32:17.883Z"
   },
   {
     "region": "jeju",
@@ -371,7 +371,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.626Z"
+    "collectedAt": "2026-08-18T00:32:17.883Z"
   },
   {
     "region": "jeju",
@@ -388,7 +388,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.626Z"
+    "collectedAt": "2026-08-18T00:32:17.883Z"
   },
   {
     "region": "jeju",
@@ -405,7 +405,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.626Z"
+    "collectedAt": "2026-08-18T00:32:17.883Z"
   },
   {
     "region": "jeju",
@@ -422,7 +422,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.626Z"
+    "collectedAt": "2026-08-18T00:32:17.883Z"
   },
   {
     "region": "jeju",
@@ -439,7 +439,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.626Z"
+    "collectedAt": "2026-08-18T00:32:17.883Z"
   },
   {
     "region": "jeju",
@@ -456,7 +456,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.626Z"
+    "collectedAt": "2026-08-18T00:32:17.883Z"
   },
   {
     "region": "jeju",
@@ -473,7 +473,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.626Z"
+    "collectedAt": "2026-08-18T00:32:17.883Z"
   },
   {
     "region": "jeju",
@@ -490,7 +490,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
+    "collectedAt": "2026-08-18T00:32:18.154Z"
   },
   {
     "region": "jeju",
@@ -507,7 +507,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
+    "collectedAt": "2026-08-18T00:32:18.154Z"
   },
   {
     "region": "jeju",
@@ -524,41 +524,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
-  },
-  {
-    "region": "jeju",
-    "neighborhood": "서귀포",
-    "name": "베메로",
-    "category": "음식점 > 카페",
-    "address": "제주특별자치도 서귀포시 색달동 2822-40",
-    "roadAddress": "제주특별자치도 서귀포시 중문관광로72번길 29-5",
-    "lat": 33.249856844115655,
-    "lng": 126.41082683099276,
-    "phone": "064-738-7832",
-    "sourceLink": "http://place.map.kakao.com/367412374",
-    "blogExcerpt": null,
-    "blogSource": null,
-    "hours": null,
-    "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
-  },
-  {
-    "region": "jeju",
-    "neighborhood": "서귀포",
-    "name": "청춘부부",
-    "category": "음식점 > 카페",
-    "address": "제주특별자치도 서귀포시 대정읍 안성리 1926-2",
-    "roadAddress": "제주특별자치도 서귀포시 대정읍 추사로38번길 181",
-    "lat": 33.26593303825782,
-    "lng": 126.27910752052361,
-    "phone": "070-8887-1529",
-    "sourceLink": "http://place.map.kakao.com/1663041096",
-    "blogExcerpt": null,
-    "blogSource": null,
-    "hours": null,
-    "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
+    "collectedAt": "2026-08-18T00:32:18.154Z"
   },
   {
     "region": "jeju",
@@ -575,7 +541,24 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
+    "collectedAt": "2026-08-18T00:32:18.154Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "서귀포",
+    "name": "베메로",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 색달동 2822-40",
+    "roadAddress": "제주특별자치도 서귀포시 중문관광로72번길 29-5",
+    "lat": 33.249856844115655,
+    "lng": 126.41082683099276,
+    "phone": "064-738-7832",
+    "sourceLink": "http://place.map.kakao.com/367412374",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.154Z"
   },
   {
     "region": "jeju",
@@ -592,7 +575,24 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
+    "collectedAt": "2026-08-18T00:32:18.154Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "서귀포",
+    "name": "청춘부부",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 대정읍 안성리 1926-2",
+    "roadAddress": "제주특별자치도 서귀포시 대정읍 추사로38번길 181",
+    "lat": 33.26593303825782,
+    "lng": 126.27910752052361,
+    "phone": "070-8887-1529",
+    "sourceLink": "http://place.map.kakao.com/1663041096",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.154Z"
   },
   {
     "region": "jeju",
@@ -609,7 +609,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
+    "collectedAt": "2026-08-18T00:32:18.154Z"
   },
   {
     "region": "jeju",
@@ -626,7 +626,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
+    "collectedAt": "2026-08-18T00:32:18.154Z"
   },
   {
     "region": "jeju",
@@ -643,24 +643,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
-  },
-  {
-    "region": "jeju",
-    "neighborhood": "서귀포",
-    "name": "볼스카페",
-    "category": "음식점 > 카페",
-    "address": "제주특별자치도 서귀포시 회수동 554-2",
-    "roadAddress": "제주특별자치도 서귀포시 일주서로 626",
-    "lat": 33.25328838235717,
-    "lng": 126.44250130435073,
-    "phone": "070-7779-1981",
-    "sourceLink": "http://place.map.kakao.com/403954331",
-    "blogExcerpt": null,
-    "blogSource": null,
-    "hours": null,
-    "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
+    "collectedAt": "2026-08-18T00:32:18.154Z"
   },
   {
     "region": "jeju",
@@ -677,7 +660,24 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
+    "collectedAt": "2026-08-18T00:32:18.154Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "서귀포",
+    "name": "볼스카페",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 회수동 554-2",
+    "roadAddress": "제주특별자치도 서귀포시 일주서로 626",
+    "lat": 33.25328838235717,
+    "lng": 126.44250130435073,
+    "phone": "070-7779-1981",
+    "sourceLink": "http://place.map.kakao.com/403954331",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.154Z"
   },
   {
     "region": "jeju",
@@ -694,7 +694,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
+    "collectedAt": "2026-08-18T00:32:18.154Z"
   },
   {
     "region": "jeju",
@@ -711,7 +711,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
+    "collectedAt": "2026-08-18T00:32:18.154Z"
   },
   {
     "region": "jeju",
@@ -728,7 +728,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:52.898Z"
+    "collectedAt": "2026-08-18T00:32:18.154Z"
   },
   {
     "region": "jeju",
@@ -745,7 +745,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
   },
   {
     "region": "jeju",
@@ -762,7 +762,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
   },
   {
     "region": "jeju",
@@ -779,7 +779,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
   },
   {
     "region": "jeju",
@@ -796,7 +796,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
   },
   {
     "region": "jeju",
@@ -813,7 +813,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
   },
   {
     "region": "jeju",
@@ -830,7 +830,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
   },
   {
     "region": "jeju",
@@ -847,7 +847,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
   },
   {
     "region": "jeju",
@@ -864,7 +864,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
   },
   {
     "region": "jeju",
@@ -881,7 +881,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
   },
   {
     "region": "jeju",
@@ -898,7 +898,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
   },
   {
     "region": "jeju",
@@ -915,7 +915,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
   },
   {
     "region": "jeju",
@@ -932,7 +932,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
   },
   {
     "region": "jeju",
@@ -949,7 +949,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
   },
   {
     "region": "jeju",
@@ -966,7 +966,7 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
   },
   {
     "region": "jeju",
@@ -983,6 +983,924 @@
     "blogSource": null,
     "hours": null,
     "needsReview": true,
-    "collectedAt": "2026-08-13T05:11:53.174Z"
+    "collectedAt": "2026-08-18T00:32:18.445Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "표선",
+    "name": "택하다, 커피",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 표선면 가시리 2856-4",
+    "roadAddress": "제주특별자치도 서귀포시 표선면 원님로652번길 118",
+    "lat": 33.34532346033775,
+    "lng": 126.76337335565096,
+    "phone": "0507-1378-6629",
+    "sourceLink": "http://place.map.kakao.com/802632260",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.712Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "표선",
+    "name": "FM빈티지카페",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 표선면 토산리 430-3",
+    "roadAddress": "제주특별자치도 서귀포시 표선면 토산강왓로 11",
+    "lat": 33.30849958080695,
+    "lng": 126.78230737709752,
+    "phone": "0503-7152-2467",
+    "sourceLink": "http://place.map.kakao.com/52481575",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.712Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "표선",
+    "name": "모드락572",
+    "category": "음식점 > 카페 > 테마카페 > 갤러리카페",
+    "address": "제주특별자치도 서귀포시 표선면 가시리 1965-1",
+    "roadAddress": "제주특별자치도 서귀포시 표선면 가시로 572",
+    "lat": 33.3543229696031,
+    "lng": 126.773751015007,
+    "phone": null,
+    "sourceLink": "http://place.map.kakao.com/19637817",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.712Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "표선",
+    "name": "커피모 로스터리카페",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 표선면 표선리 666",
+    "roadAddress": "제주특별자치도 서귀포시 표선면 표선동서로 227",
+    "lat": 33.32440169660587,
+    "lng": 126.83169866157834,
+    "phone": "010-4089-9225",
+    "sourceLink": "http://place.map.kakao.com/1165142038",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.712Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "표선",
+    "name": "그라포드커피",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 표선면 토산리 526-3",
+    "roadAddress": "제주특별자치도 서귀포시 표선면 토산중앙로 22",
+    "lat": 33.30898558093613,
+    "lng": 126.7792533289778,
+    "phone": "010-6830-1105",
+    "sourceLink": "http://place.map.kakao.com/511782514",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.712Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "표선",
+    "name": "돌이삼구",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 표선면 표선리 688-1",
+    "roadAddress": "제주특별자치도 서귀포시 표선면 표선동서로 239",
+    "lat": 33.32528968242254,
+    "lng": 126.83227799440138,
+    "phone": null,
+    "sourceLink": "http://place.map.kakao.com/846853529",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.712Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "표선",
+    "name": "cafeEDC",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 성산읍 신천리 382",
+    "roadAddress": "제주특별자치도 서귀포시 성산읍 신천서로72번길 16-4",
+    "lat": 33.3394468914013,
+    "lng": 126.853551946307,
+    "phone": "0503-7154-4471",
+    "sourceLink": "http://place.map.kakao.com/1175952982",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.712Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "표선",
+    "name": "솔바르",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 성산읍 신풍리 83-6",
+    "roadAddress": "제주특별자치도 서귀포시 성산읍 일주동로 5311",
+    "lat": 33.3640733103918,
+    "lng": 126.865820034768,
+    "phone": null,
+    "sourceLink": "http://place.map.kakao.com/378611729",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.712Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "표선",
+    "name": "정체불명",
+    "category": "음식점 > 카페 > 커피전문점",
+    "address": "제주특별자치도 서귀포시 성산읍 삼달리 453-3",
+    "roadAddress": "제주특별자치도 서귀포시 성산읍 삼달로163번길 34",
+    "lat": 33.37212926269361,
+    "lng": 126.8507720526228,
+    "phone": null,
+    "sourceLink": "http://place.map.kakao.com/86401850",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.712Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "조천",
+    "name": "무우수커피로스터스",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 제주시 조천읍 조천리 2361",
+    "roadAddress": "제주특별자치도 제주시 조천읍 조천11길 22-2",
+    "lat": 33.5377856728773,
+    "lng": 126.638359880905,
+    "phone": "070-4242-2745",
+    "sourceLink": "http://place.map.kakao.com/1523395074",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.983Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "조천",
+    "name": "카페시소",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 제주시 조천읍 조천리 3075-1",
+    "roadAddress": "제주특별자치도 제주시 조천읍 조천북1길 70",
+    "lat": 33.5434518871648,
+    "lng": 126.634882244975,
+    "phone": "010-5663-0208",
+    "sourceLink": "http://place.map.kakao.com/406509155",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.983Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "조천",
+    "name": "5L2F",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 제주시 조천읍 와흘리 1912-3",
+    "roadAddress": "제주특별자치도 제주시 조천읍 와흘상길 30",
+    "lat": 33.49398245189198,
+    "lng": 126.63340702664638,
+    "phone": "064-752-5020",
+    "sourceLink": "http://place.map.kakao.com/615740956",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.983Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "조천",
+    "name": "동립",
+    "category": "음식점 > 카페 > 커피전문점",
+    "address": "제주특별자치도 제주시 조천읍 북촌리 488",
+    "roadAddress": "제주특별자치도 제주시 조천읍 북촌11길 27",
+    "lat": 33.550433216425986,
+    "lng": 126.69459924704249,
+    "phone": "010-6343-8920",
+    "sourceLink": "http://place.map.kakao.com/117572232",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.983Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "조천",
+    "name": "포빈즈",
+    "category": "음식점 > 카페 > 커피전문점",
+    "address": "제주특별자치도 제주시 조천읍 대흘리 1664-3",
+    "roadAddress": "제주특별자치도 제주시 조천읍 중산간동로 668",
+    "lat": 33.498789265476205,
+    "lng": 126.65651521076705,
+    "phone": "070-4203-0246",
+    "sourceLink": "http://place.map.kakao.com/1405390792",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.983Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "조천",
+    "name": "아구아비바",
+    "category": "음식점 > 카페 > 커피전문점",
+    "address": "제주특별자치도 제주시 조천읍 신촌리 2202-1",
+    "roadAddress": "제주특별자치도 제주시 조천읍 신촌북3길 1",
+    "lat": 33.537265667435385,
+    "lng": 126.61888926051867,
+    "phone": "0503-7150-7037",
+    "sourceLink": "http://place.map.kakao.com/1635962354",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.983Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "조천",
+    "name": "픽코어 로스터스",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 제주시 조천읍 교래리 635",
+    "roadAddress": "제주특별자치도 제주시 조천읍 교래4길 22-23",
+    "lat": 33.42590505746669,
+    "lng": 126.67134841720801,
+    "phone": "0503-7153-7555",
+    "sourceLink": "http://place.map.kakao.com/853712834",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.983Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "조천",
+    "name": "홀리브로스터리카페",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 제주시 조천읍 조천리 1273-1",
+    "roadAddress": "제주특별자치도 제주시 조천읍 조천16길 44",
+    "lat": 33.5375480918478,
+    "lng": 126.64411326092971,
+    "phone": "070-8807-5928",
+    "sourceLink": "http://place.map.kakao.com/664453481",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.983Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "조천",
+    "name": "로바인커피 제주 조천신촌점",
+    "category": "음식점 > 카페 > 커피전문점",
+    "address": "제주특별자치도 제주시 조천읍 신촌리 2268",
+    "roadAddress": "제주특별자치도 제주시 조천읍 신촌북3길 4-7",
+    "lat": 33.53752631139276,
+    "lng": 126.61803866311973,
+    "phone": "010-8638-3383",
+    "sourceLink": "http://place.map.kakao.com/602396210",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.983Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "조천",
+    "name": "탈리 로스터즈",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 제주시 조천읍 신촌리 2591-6",
+    "roadAddress": "제주특별자치도 제주시 조천읍 신촌남1길 7",
+    "lat": 33.5299132732038,
+    "lng": 126.618331583293,
+    "phone": "010-5722-9796",
+    "sourceLink": "http://place.map.kakao.com/124906804",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.983Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "조천",
+    "name": "단추숲",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 제주시 조천읍 선흘리 1265-4",
+    "roadAddress": "제주특별자치도 제주시 조천읍 중산간동로 1301",
+    "lat": 33.51008839707255,
+    "lng": 126.70643165066156,
+    "phone": "0502-5551-8383",
+    "sourceLink": "http://place.map.kakao.com/1380538907",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.983Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "조천",
+    "name": "씨투디",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 제주시 삼양일동 1577-12",
+    "roadAddress": "제주특별자치도 제주시 선사로8길 79",
+    "lat": 33.52931208478033,
+    "lng": 126.5923556911593,
+    "phone": "0503-7152-4513",
+    "sourceLink": "http://place.map.kakao.com/2002167802",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:18.983Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "한림",
+    "name": "카페이시도르",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 제주시 한림읍 금악리 117",
+    "roadAddress": "제주특별자치도 제주시 한림읍 금악북로 353",
+    "lat": 33.3466117953189,
+    "lng": 126.322598901472,
+    "phone": "064-796-0677",
+    "sourceLink": "http://place.map.kakao.com/418652493",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.292Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "한림",
+    "name": "말로나카페",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 제주시 한림읍 귀덕리 978",
+    "roadAddress": "제주특별자치도 제주시 한림읍 귀덕11길 28",
+    "lat": 33.4458103669449,
+    "lng": 126.295054170711,
+    "phone": "0507-1339-4868",
+    "sourceLink": "http://place.map.kakao.com/398384813",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.292Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "한림",
+    "name": "커피공장",
+    "category": "음식점 > 카페 > 커피전문점",
+    "address": "제주특별자치도 제주시 한림읍 귀덕리 1236-10",
+    "roadAddress": "제주특별자치도 제주시 한림읍 일주서로 5896",
+    "lat": 33.4439884477623,
+    "lng": 126.296038955763,
+    "phone": "1577-8698",
+    "sourceLink": "http://place.map.kakao.com/922064081",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.292Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "한림",
+    "name": "미닝",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 제주시 한림읍 귀덕리 4143",
+    "roadAddress": "제주특별자치도 제주시 한림읍 한림해안로 592-1",
+    "lat": 33.440651278265,
+    "lng": 126.277472263669,
+    "phone": "0507-1320-4626",
+    "sourceLink": "http://place.map.kakao.com/898829575",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.292Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "월정리",
+    "name": "N109",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 제주시 구좌읍 김녕리 109-1",
+    "roadAddress": "제주특별자치도 제주시 구좌읍 김녕로 307",
+    "lat": 33.5518221443404,
+    "lng": 126.769372912029,
+    "phone": "010-5914-6259",
+    "sourceLink": "http://place.map.kakao.com/569334096",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.577Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "월정리",
+    "name": "더모먼트",
+    "category": "음식점 > 카페 > 커피전문점",
+    "address": "제주특별자치도 제주시 구좌읍 김녕리 1189-1",
+    "roadAddress": "제주특별자치도 제주시 구좌읍 김녕로22길 3",
+    "lat": 33.5558727519284,
+    "lng": 126.756527127591,
+    "phone": "070-8888-8316",
+    "sourceLink": "http://place.map.kakao.com/674649553",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.577Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "월정리",
+    "name": "광해다락 로스터리 커피하우스",
+    "category": "음식점 > 카페 > 커피전문점",
+    "address": "제주특별자치도 제주시 구좌읍 행원리 759-1",
+    "roadAddress": "제주특별자치도 제주시 구좌읍 행원로 149-20",
+    "lat": 33.55295955711874,
+    "lng": 126.80942107458623,
+    "phone": "010-9700-7591",
+    "sourceLink": "http://place.map.kakao.com/1795545081",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.577Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "엘리브",
+    "category": "음식점 > 카페",
+    "address": "경남 창원시 성산구 귀산동 466-3",
+    "roadAddress": "경남 창원시 성산구 귀산로 19",
+    "lat": 35.163403545303574,
+    "lng": 128.6128344102132,
+    "phone": "055-274-7003",
+    "sourceLink": "http://place.map.kakao.com/1181055498",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "1997영국집",
+    "category": "음식점 > 카페 > 테마카페 > 디저트카페",
+    "address": "경남 창원시 성산구 용호동 53-5",
+    "roadAddress": "경남 창원시 성산구 외동반림로248번길 25",
+    "lat": 35.237872355383,
+    "lng": 128.682012783228,
+    "phone": "055-286-1997",
+    "sourceLink": "http://place.map.kakao.com/390245968",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "우리로스터스",
+    "category": "음식점 > 카페 > 커피전문점",
+    "address": "경남 창원시 성산구 대방동 340-6",
+    "roadAddress": "경남 창원시 성산구 대암로105번길 8-19",
+    "lat": 35.21587486169542,
+    "lng": 128.70919949893818,
+    "phone": "010-7407-1887",
+    "sourceLink": "http://place.map.kakao.com/425830543",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "브라운핸즈 라키비움창원점",
+    "category": "음식점 > 카페 > 커피전문점",
+    "address": "경남 창원시 성산구 대원동 79-1",
+    "roadAddress": "경남 창원시 성산구 창원대로 520",
+    "lat": 35.227679489586635,
+    "lng": 128.65159286399276,
+    "phone": "055-277-0621",
+    "sourceLink": "http://place.map.kakao.com/1558085946",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "크루빈",
+    "category": "음식점 > 카페",
+    "address": "경남 창원시 성산구 용호동 43-1",
+    "roadAddress": "경남 창원시 성산구 외동반림로 264",
+    "lat": 35.2402826509172,
+    "lng": 128.680748762466,
+    "phone": "010-2439-3537",
+    "sourceLink": "http://place.map.kakao.com/996406923",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "커피컨택트",
+    "category": "음식점 > 카페 > 커피전문점",
+    "address": "경남 창원시 성산구 신월동 30-10",
+    "roadAddress": "경남 창원시 성산구 신월로 83",
+    "lat": 35.2259615118665,
+    "lng": 128.695728466312,
+    "phone": "055-261-9257",
+    "sourceLink": "http://place.map.kakao.com/785781361",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "헤이테이",
+    "category": "음식점 > 카페 > 테마카페 > 디저트카페",
+    "address": "경남 창원시 성산구 신월동 40-12",
+    "roadAddress": "경남 창원시 성산구 신월로 4",
+    "lat": 35.2308239898002,
+    "lng": 128.68957777887,
+    "phone": null,
+    "sourceLink": "http://place.map.kakao.com/30983610",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "험블커피로스터스",
+    "category": "음식점 > 카페",
+    "address": "경남 창원시 성산구 신월동 49-4",
+    "roadAddress": "경남 창원시 성산구 상남로 188",
+    "lat": 35.2286390964753,
+    "lng": 128.687470893751,
+    "phone": "055-713-1209",
+    "sourceLink": "http://place.map.kakao.com/1427481700",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "로스터리퐁",
+    "category": "음식점 > 카페",
+    "address": "경남 창원시 성산구 귀산동 626-2",
+    "roadAddress": "경남 창원시 성산구 삼귀로486번길 69",
+    "lat": 35.153877847431936,
+    "lng": 128.61009503173395,
+    "phone": "0502-5553-0858",
+    "sourceLink": "http://place.map.kakao.com/1719931187",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "다옴카페",
+    "category": "음식점 > 카페",
+    "address": "경남 창원시 성산구 용호동 73-37",
+    "roadAddress": "경남 창원시 성산구 용지로 159",
+    "lat": 35.2291575702567,
+    "lng": 128.68136495767,
+    "phone": "010-2267-3089",
+    "sourceLink": "http://place.map.kakao.com/620100195",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "올이즈웰커피하우스",
+    "category": "음식점 > 카페",
+    "address": "경남 창원시 성산구 반지동 38-7",
+    "roadAddress": "경남 창원시 성산구 반송로 25",
+    "lat": 35.242547115317365,
+    "lng": 128.6612582014944,
+    "phone": "0502-5554-0563",
+    "sourceLink": "http://place.map.kakao.com/1533348049",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "위아워어스",
+    "category": "음식점 > 카페",
+    "address": "경남 창원시 성산구 상남동 82-1",
+    "roadAddress": "경남 창원시 성산구 단정로 44",
+    "lat": 35.218970005504545,
+    "lng": 128.68487769460106,
+    "phone": null,
+    "sourceLink": "http://place.map.kakao.com/705099045",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "위츠",
+    "category": "음식점 > 카페",
+    "address": "경남 창원시 성산구 사파동 111-13",
+    "roadAddress": "경남 창원시 성산구 신사로 135",
+    "lat": 35.220108946425746,
+    "lng": 128.698046932394,
+    "phone": "070-7793-0531",
+    "sourceLink": "http://place.map.kakao.com/654793888",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "도돌커피로스터스",
+    "category": "음식점 > 카페",
+    "address": "경남 창원시 성산구 용호동 25-10",
+    "roadAddress": "경남 창원시 성산구 용호로 122",
+    "lat": 35.2384637109704,
+    "lng": 128.684204358495,
+    "phone": null,
+    "sourceLink": "http://place.map.kakao.com/965521756",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "성산",
+    "name": "가로수길 나인배치카페",
+    "category": "음식점 > 카페",
+    "address": "경남 창원시 성산구 용호동 56-8",
+    "roadAddress": "경남 창원시 성산구 외동반림로248번길 3",
+    "lat": 35.2390573185667,
+    "lng": 128.6800116619488,
+    "phone": null,
+    "sourceLink": "http://place.map.kakao.com/1450735727",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:19.851Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "대정",
+    "name": "크래커스커피 대정점",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 대정읍 안성리 1858-1",
+    "roadAddress": "제주특별자치도 서귀포시 대정읍 보성구억로126번길 34",
+    "lat": 33.2632820962547,
+    "lng": 126.279693811946,
+    "phone": "064-792-8900",
+    "sourceLink": "http://place.map.kakao.com/1482115450",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:20.132Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "대정",
+    "name": "나비정원",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 대정읍 하모리 1068-7",
+    "roadAddress": "제주특별자치도 서귀포시 대정읍 신영로 60-7",
+    "lat": 33.22042296448407,
+    "lng": 126.24933508622262,
+    "phone": "064-792-2688",
+    "sourceLink": "http://place.map.kakao.com/21607825",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:20.132Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "대정",
+    "name": "모아시",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 대정읍 무릉리 3307-2",
+    "roadAddress": "제주특별자치도 서귀포시 대정읍 무릉중앙로24번길 16",
+    "lat": 33.2708461901694,
+    "lng": 126.19915940008,
+    "phone": "064-794-9995",
+    "sourceLink": "http://place.map.kakao.com/1455851481",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:20.132Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "대정",
+    "name": "대정로스터리카페",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 대정읍 인성리 157-1",
+    "roadAddress": "제주특별자치도 서귀포시 대정읍 인성로25번길 5-1",
+    "lat": 33.246594432503834,
+    "lng": 126.2833287622063,
+    "phone": "064-792-2955",
+    "sourceLink": "http://place.map.kakao.com/565617348",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:20.132Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "대정",
+    "name": "나인브로스커피",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 대정읍 신평리 371-7",
+    "roadAddress": "제주특별자치도 서귀포시 대정읍 중산간서로 2595",
+    "lat": 33.2662785998061,
+    "lng": 126.259966403401,
+    "phone": "070-4242-5912",
+    "sourceLink": "http://place.map.kakao.com/718874668",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:20.132Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "대정",
+    "name": "프라반",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 대정읍 상모리 2655-11",
+    "roadAddress": "제주특별자치도 서귀포시 대정읍 상모인성로 24",
+    "lat": 33.2267365944983,
+    "lng": 126.269722798523,
+    "phone": "0507-1491-3479",
+    "sourceLink": "http://place.map.kakao.com/1122124210",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:20.132Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "대정",
+    "name": "메종메르미누",
+    "category": "음식점 > 카페",
+    "address": "제주특별자치도 서귀포시 대정읍 무릉리 2869-2",
+    "roadAddress": "제주특별자치도 서귀포시 대정읍 서삼중로 90",
+    "lat": 33.2711160063224,
+    "lng": 126.202984349845,
+    "phone": "0507-1412-6486",
+    "sourceLink": "http://place.map.kakao.com/2060457182",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:20.132Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "대정",
+    "name": "필립푸스",
+    "category": "음식점 > 카페 > 테마카페 > 디저트카페",
+    "address": "제주특별자치도 서귀포시 대정읍 하모리 1089-23",
+    "roadAddress": "제주특별자치도 서귀포시 대정읍 신영로36번길 35",
+    "lat": 33.21989029680803,
+    "lng": 126.24697865393799,
+    "phone": "064-794-0001",
+    "sourceLink": "http://place.map.kakao.com/1022293097",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:20.132Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "대정",
+    "name": "청옥헌",
+    "category": "음식점 > 카페 > 커피전문점",
+    "address": "제주특별자치도 서귀포시 대정읍 보성리 1819-3",
+    "roadAddress": "제주특별자치도 서귀포시 대정읍 보성하로 4-25",
+    "lat": 33.24941865295131,
+    "lng": 126.2720601533986,
+    "phone": "010-7900-3749",
+    "sourceLink": "http://place.map.kakao.com/586101925",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:20.132Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "대정",
+    "name": "삼파랑커피로스터스",
+    "category": "음식점 > 카페 > 커피전문점",
+    "address": "제주특별자치도 서귀포시 대정읍 상모리 418",
+    "roadAddress": "제주특별자치도 서귀포시 대정읍 송악관광로 375",
+    "lat": 33.2098438630388,
+    "lng": 126.286812886252,
+    "phone": "010-8121-1036",
+    "sourceLink": "http://place.map.kakao.com/134837555",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:20.132Z"
+  },
+  {
+    "region": "jeju",
+    "neighborhood": "대정",
+    "name": "패스브루",
+    "category": "음식점 > 카페 > 커피전문점",
+    "address": "제주특별자치도 서귀포시 안덕면 사계리 3191",
+    "roadAddress": "제주특별자치도 서귀포시 안덕면 사계북로41번길 27-49",
+    "lat": 33.2372590599918,
+    "lng": 126.28944644553,
+    "phone": "0503-7152-1341",
+    "sourceLink": "http://place.map.kakao.com/1802743390",
+    "blogExcerpt": null,
+    "blogSource": null,
+    "hours": null,
+    "needsReview": true,
+    "collectedAt": "2026-08-18T00:32:20.132Z"
   }
 ]
