@@ -16,6 +16,19 @@ function localPhotoUrl(slug: string) {
   return existsSync(photoPath) ? `/photos/${slug}.jpg` : "/brand/flower-mark.png";
 }
 
+function extractClosedDay(hours: string): string {
+  const parenMatch = hours.match(/\(([^)]*휴무[^)]*)\)/);
+  if (parenMatch) return parenMatch[1].trim();
+
+  const commaMatch = hours.split(",").find((part) => part.includes("휴무"));
+  if (commaMatch) return commaMatch.trim();
+
+  const leadingMatch = hours.match(/^([가-힣·]+\s*휴무)/);
+  if (leadingMatch) return leadingMatch[1].trim();
+
+  return "확인 필요";
+}
+
 async function photoUrl(slug: string) {
   const primary = await getPrimaryPhotoUrl(slug);
   return primary ?? localPhotoUrl(slug);
@@ -136,15 +149,23 @@ export default async function RoasteryPage(
 
         <dl className="mt-8 space-y-3 border-t border-black/10 pt-6 text-sm dark:border-white/10">
           <div className="flex gap-3">
-            <dt className="w-20 shrink-0 text-foreground/50">주소</dt>
+            <dt className="w-28 shrink-0 text-foreground/50">주소</dt>
             <dd>{roastery.address}</dd>
           </div>
           <div className="flex gap-3">
-            <dt className="w-20 shrink-0 text-foreground/50">영업시간</dt>
+            <dt className="w-28 shrink-0 text-foreground/50">영업시간</dt>
             <dd>{roastery.hours}</dd>
           </div>
           <div className="flex gap-3">
-            <dt className="w-20 shrink-0 text-foreground/50">시그니처</dt>
+            <dt className="w-28 shrink-0 text-foreground/50">휴무일</dt>
+            <dd>{extractClosedDay(roastery.hours)}</dd>
+          </div>
+          <div className="flex gap-3">
+            <dt className="w-28 shrink-0 text-foreground/50">주차</dt>
+            <dd>확인 필요</dd>
+          </div>
+          <div className="flex gap-3">
+            <dt className="w-28 shrink-0 text-foreground/50">대표메뉴 & 시그니처</dt>
             <dd>{roastery.signature.join(", ")}</dd>
           </div>
         </dl>
