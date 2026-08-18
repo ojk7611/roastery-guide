@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 const KAKAO_JS_KEY = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
 
 export interface MapMarker {
+  id?: string;
   lat: number;
   lng: number;
   name: string;
@@ -15,9 +16,11 @@ export interface MapMarker {
 export default function KakaoMap({
   markers,
   className,
+  onMarkerClick,
 }: {
   markers: MapMarker[];
   className?: string;
+  onMarkerClick?: (id: string) => void;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [sdkLoaded, setSdkLoaded] = useState(
@@ -79,7 +82,12 @@ export default function KakaoMap({
         kakao.maps.event.addListener(mapMarker, "mouseout", () => {
           infowindow.close();
         });
-        if (marker.href) {
+        if (onMarkerClick && marker.id) {
+          const id = marker.id;
+          kakao.maps.event.addListener(mapMarker, "click", () => {
+            onMarkerClick(id);
+          });
+        } else if (marker.href) {
           kakao.maps.event.addListener(mapMarker, "click", () => {
             window.location.href = marker.href!;
           });
@@ -90,7 +98,7 @@ export default function KakaoMap({
         map.setBounds(bounds);
       }
     });
-  }, [sdkLoaded, markers]);
+  }, [sdkLoaded, markers, onMarkerClick]);
 
   if (!KAKAO_JS_KEY) {
     return (

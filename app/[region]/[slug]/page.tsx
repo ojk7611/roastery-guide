@@ -6,6 +6,7 @@ import { getRegion } from "@/lib/regions";
 import { getRoastery } from "@/data/roasteries";
 import { SITE_URL } from "@/lib/site";
 import { getPrimaryPhotoUrl } from "@/lib/db";
+import { extractClosedDay } from "@/lib/hours";
 import KakaoMap from "@/components/KakaoMap";
 import RoasteryPhoto from "@/components/RoasteryPhoto";
 import RoasteryReviews from "@/components/RoasteryReviews";
@@ -14,19 +15,6 @@ import SubmissionForm from "@/components/SubmissionForm";
 function localPhotoUrl(slug: string) {
   const photoPath = path.join(process.cwd(), "public", "photos", `${slug}.jpg`);
   return existsSync(photoPath) ? `/photos/${slug}.jpg` : "/brand/flower-mark.png";
-}
-
-function extractClosedDay(hours: string): string {
-  const parenMatch = hours.match(/\(([^)]*휴무[^)]*)\)/);
-  if (parenMatch) return parenMatch[1].trim();
-
-  const commaMatch = hours.split(",").find((part) => part.includes("휴무"));
-  if (commaMatch) return commaMatch.trim();
-
-  const leadingMatch = hours.match(/^([가-힣·]+\s*휴무)/);
-  if (leadingMatch) return leadingMatch[1].trim();
-
-  return "확인 필요";
 }
 
 async function photoUrl(slug: string) {

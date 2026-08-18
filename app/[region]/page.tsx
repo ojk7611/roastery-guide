@@ -5,7 +5,7 @@ import { getRegion } from "@/lib/regions";
 import { getRoasteriesByRegion } from "@/data/roasteries";
 import { seoulAreas, getSeoulAreaSlug } from "@/lib/seoul-areas";
 import RoasteryCard from "@/components/RoasteryCard";
-import KakaoMap from "@/components/KakaoMap";
+import RegionExplorer from "@/components/RegionExplorer";
 import { getPrimaryPhotoMap } from "@/lib/db";
 
 export async function generateMetadata(
@@ -98,15 +98,7 @@ export default async function RegionPage(props: PageProps<"/[region]">) {
         </nav>
       )}
 
-      <KakaoMap
-        className="mt-8 h-80 w-full"
-        markers={roasteries.map((r) => ({
-          lat: r.lat,
-          lng: r.lng,
-          name: r.name,
-          href: `/${r.region}/${r.slug}`,
-        }))}
-      />
+      <RegionExplorer roasteries={roasteries} />
 
       <div className="mt-10 grid gap-4 sm:grid-cols-2">
         {roasteries.map((roastery) => (
