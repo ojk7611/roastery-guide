@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { regions } from "@/lib/regions";
 import { getRoasteriesByRegion } from "@/data/roasteries";
+import RegionMap from "@/components/RegionMap";
 
 export default function Home() {
   return (
@@ -13,6 +14,10 @@ export default function Home() {
           전국 로스터리 카페를 지역별로 모았습니다. 위치, 영업시간, 시그니처
           메뉴를 한눈에 확인하세요.
         </p>
+      </section>
+
+      <section className="mx-auto mt-12 max-w-md">
+        <RegionMap />
       </section>
 
       <section className="mt-12 grid gap-4 sm:grid-cols-3">
