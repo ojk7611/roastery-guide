@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "collect": "node scripts/collect-roasteries.mjs",
-    "fetch-photos": "node scripts/fetch-cafe-photos.mjs"
+    "fetch-photos": "node scripts/fetch-cafe-photos.mjs",
+    "add-kakao-urls": "node scripts/add-kakao-urls.mjs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",

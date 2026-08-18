@@ -1076,6 +1076,7 @@ export const roasteries: Roastery[] = [
     lat: 37.56336973604095,
     lng: 126.97839178643756,
     source: "https://blog.naver.com/sunsee365/224368743188",
+    kakaoUrl: "http://place.map.kakao.com/1965342185",
   },
   {
     id: "seoul-31",
@@ -1175,6 +1176,7 @@ export const roasteries: Roastery[] = [
     lat: 35.147612,
     lng: 126.8848463,
     source: "https://blog.naver.com/90r_rabbit/224370974876",
+    kakaoUrl: "http://place.map.kakao.com/755597411",
   },
   {
     id: "busan-21",
@@ -1190,6 +1192,7 @@ export const roasteries: Roastery[] = [
     lat: 35.09623373290051,
     lng: 129.0425657104812,
     source: "https://blog.naver.com/newalice123/224346060071",
+    kakaoUrl: "http://place.map.kakao.com/1815462061",
   },
   {
     id: "jeju-19",
@@ -1205,6 +1208,7 @@ export const roasteries: Roastery[] = [
     lat: 33.32440169660587,
     lng: 126.83169866157834,
     source: "https://blog.naver.com/misun99wo/223667421424",
+    kakaoUrl: "http://place.map.kakao.com/1165142038",
   },
   {
     id: "jeju-20",
@@ -1220,6 +1224,7 @@ export const roasteries: Roastery[] = [
     lat: 33.5377856728773,
     lng: 126.638359880905,
     source: "https://blog.naver.com/youngh0113/224300516304",
+    kakaoUrl: "http://place.map.kakao.com/1523395074",
   },
   {
     id: "jeju-21",
@@ -1235,6 +1240,7 @@ export const roasteries: Roastery[] = [
     lat: 33.42590505746669,
     lng: 126.67134841720801,
     source: "https://blog.naver.com/jiwoo242712/224263930737",
+    kakaoUrl: "http://place.map.kakao.com/853712834",
   },
   {
     id: "jeju-22",
@@ -1250,6 +1256,7 @@ export const roasteries: Roastery[] = [
     lat: 33.5375480918478,
     lng: 126.64411326092971,
     source: "https://blog.naver.com/99276217/222439296345",
+    kakaoUrl: "http://place.map.kakao.com/664453481",
   },
   {
     id: "daejeon-14",
@@ -1265,6 +1272,7 @@ export const roasteries: Roastery[] = [
     lat: 36.3690673886117,
     lng: 127.338259089906,
     source: "https://blog.naver.com/fhak5634/224096635819",
+    kakaoUrl: "http://place.map.kakao.com/44330173",
   },
   {
     id: "daegu-12",
@@ -1280,6 +1288,7 @@ export const roasteries: Roastery[] = [
     lat: 35.837270868239585,
     lng: 128.5818906469234,
     source: "https://blog.naver.com/dst02028/224247466142",
+    kakaoUrl: "http://place.map.kakao.com/337641651",
   },
   {
     id: "daegu-13",
@@ -1295,6 +1304,7 @@ export const roasteries: Roastery[] = [
     lat: 35.86189825685411,
     lng: 128.62303231454248,
     source: "https://blog.naver.com/hsh_sl/224360600625",
+    kakaoUrl: "http://place.map.kakao.com/504376034",
   },
   {
     id: "seoul-34",
@@ -1310,6 +1320,7 @@ export const roasteries: Roastery[] = [
     lat: 37.533434780128,
     lng: 127.009088543228,
     source: "https://blog.naver.com/shl5108/224377057811",
+    kakaoUrl: "http://place.map.kakao.com/1255965163",
   },
   {
     id: "seoul-35",
@@ -1325,6 +1336,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5496214017823,
     lng: 126.931255935298,
     source: "https://blog.naver.com/hex79/224135601605",
+    kakaoUrl: "http://place.map.kakao.com/1374778432",
   },
   {
     id: "seoul-36",
@@ -1340,6 +1352,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5199590347165,
     lng: 126.892015915392,
     source: "https://blog.naver.com/konaj/224366843701",
+    kakaoUrl: "http://place.map.kakao.com/1938000139",
   },
   {
     id: "seoul-37",
@@ -1355,6 +1368,7 @@ export const roasteries: Roastery[] = [
     lat: 37.57905789813956,
     lng: 126.97025997346216,
     source: "https://blog.naver.com/hexito/224127860293",
+    kakaoUrl: "http://place.map.kakao.com/1848046459",
   },
   {
     id: "busan-11",
@@ -1370,6 +1384,7 @@ export const roasteries: Roastery[] = [
     lat: 35.1642183559755,
     lng: 129.157634987228,
     source: "https://blog.naver.com/mercyblu/224366089453",
+    kakaoUrl: "http://place.map.kakao.com/811889551",
   },
   {
     id: "busan-22",
@@ -1385,6 +1400,7 @@ export const roasteries: Roastery[] = [
     lat: 35.1506205708342,
     lng: 129.114537053368,
     source: "https://blog.naver.com/8mmm8/224370904208",
+    kakaoUrl: "http://place.map.kakao.com/747353131",
   },
   {
     id: "busan-13",
@@ -1400,6 +1416,7 @@ export const roasteries: Roastery[] = [
     lat: 35.15333826406228,
     lng: 129.12520442749474,
     source: "https://blog.naver.com/zzi_ri/224301127958",
+    kakaoUrl: "http://place.map.kakao.com/682706009",
   },
   {
     id: "busan-23",
@@ -1415,6 +1432,7 @@ export const roasteries: Roastery[] = [
     lat: 35.102731722503094,
     lng: 129.02011440404235,
     source: "https://blog.naver.com/congcong03/224220244791",
+    kakaoUrl: "http://place.map.kakao.com/693880372",
   },
   {
     id: "jeju-23",
@@ -1430,6 +1448,7 @@ export const roasteries: Roastery[] = [
     lat: 33.5554423755959,
     lng: 126.79628990287,
     source: "https://blog.naver.com/sirisiri33/224370223174",
+    kakaoUrl: "http://place.map.kakao.com/18325298",
   },
   {
     id: "jeju-24",
@@ -1445,6 +1464,7 @@ export const roasteries: Roastery[] = [
     lat: 33.38629727591854,
     lng: 126.23053540906642,
     source: "https://blog.naver.com/dp355379/223678729940",
+    kakaoUrl: "http://place.map.kakao.com/1525088120",
   },
   {
     id: "gwangju-15",
@@ -1460,6 +1480,7 @@ export const roasteries: Roastery[] = [
     lat: 35.167046928617964,
     lng: 126.85536038830635,
     source: "https://blog.naver.com/xc12cv/223656901626",
+    kakaoUrl: "http://place.map.kakao.com/1194907330",
   },
   {
     id: "gwangju-16",
@@ -1475,6 +1496,7 @@ export const roasteries: Roastery[] = [
     lat: 35.2124618379487,
     lng: 126.839071508355,
     source: "https://blog.naver.com/yoom_yh/224136736000",
+    kakaoUrl: "http://place.map.kakao.com/87467152",
   },
   {
     id: "gwangju-17",
@@ -1490,6 +1512,7 @@ export const roasteries: Roastery[] = [
     lat: 35.15359843710232,
     lng: 126.89137076093719,
     source: "https://blog.naver.com/jjostory_o/224350881950",
+    kakaoUrl: "http://place.map.kakao.com/1734376195",
   },
   {
     id: "gwangju-18",
@@ -1505,6 +1528,7 @@ export const roasteries: Roastery[] = [
     lat: 35.1754717532972,
     lng: 126.886511439531,
     source: "https://blog.naver.com/alfk2xks/224359875951",
+    kakaoUrl: "http://place.map.kakao.com/1130699358",
   },
   {
     id: "daejeon-15",
@@ -1520,6 +1544,7 @@ export const roasteries: Roastery[] = [
     lat: 36.39195895255316,
     lng: 127.35014210518523,
     source: "https://blog.naver.com/soyh0916/224251262088",
+    kakaoUrl: "http://place.map.kakao.com/1773387300",
   },
   {
     id: "daejeon-16",
@@ -1535,6 +1560,7 @@ export const roasteries: Roastery[] = [
     lat: 36.34954916321208,
     lng: 127.3397342747788,
     source: "https://blog.naver.com/yoonji_story/223973978020",
+    kakaoUrl: "http://place.map.kakao.com/652949894",
   },
   {
     id: "daejeon-17",
@@ -1550,6 +1576,7 @@ export const roasteries: Roastery[] = [
     lat: 36.3358773581964,
     lng: 127.437079197779,
     source: "https://blog.naver.com/dlwoalsgod/224379772613",
+    kakaoUrl: "http://place.map.kakao.com/470592449",
   },
   {
     id: "daegu-14",
@@ -1565,6 +1592,7 @@ export const roasteries: Roastery[] = [
     lat: 35.865927889773324,
     lng: 128.59683230632086,
     source: "https://blog.naver.com/cham19_7/223567723163",
+    kakaoUrl: "http://place.map.kakao.com/1297362852",
   },
   {
     id: "daegu-15",
@@ -1580,6 +1608,7 @@ export const roasteries: Roastery[] = [
     lat: 35.8346086652144,
     lng: 128.613352995785,
     source: "https://blog.naver.com/rococoj/224356571096",
+    kakaoUrl: "http://place.map.kakao.com/356265115",
   },
   {
     id: "daegu-16",
@@ -1595,6 +1624,7 @@ export const roasteries: Roastery[] = [
     lat: 35.873375436360774,
     lng: 128.5904105948702,
     source: "https://blog.naver.com/wlsdudqkr22/223967476546",
+    kakaoUrl: "http://place.map.kakao.com/189664814",
   },
   {
     id: "daegu-17",
@@ -1610,6 +1640,7 @@ export const roasteries: Roastery[] = [
     lat: 35.87664444183964,
     lng: 128.63088555166948,
     source: "https://blog.naver.com/dlskrud6375/223256227950",
+    kakaoUrl: "http://place.map.kakao.com/853552226",
   },
   {
     id: "daegu-18",
@@ -1625,6 +1656,7 @@ export const roasteries: Roastery[] = [
     lat: 35.86469060257829,
     lng: 128.62558569161507,
     source: "https://blog.naver.com/tgmetro/223761704882",
+    kakaoUrl: "http://place.map.kakao.com/951550482",
   },
   {
     id: "seoul-38",
@@ -1640,6 +1672,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5209492806488,
     lng: 127.024140070787,
     source: "https://blog.naver.com/cir213/224371639873",
+    kakaoUrl: "http://place.map.kakao.com/1200846719",
   },
   {
     id: "seoul-39",
@@ -1655,6 +1688,7 @@ export const roasteries: Roastery[] = [
     lat: 37.56312596854377,
     lng: 127.03178234013394,
     source: "https://blog.naver.com/yoluu/224317381542",
+    kakaoUrl: "http://place.map.kakao.com/726196976",
   },
   {
     id: "seoul-40",
@@ -1670,6 +1704,7 @@ export const roasteries: Roastery[] = [
     lat: 37.55197007737681,
     lng: 126.97711288346454,
     source: "https://blog.naver.com/asomes2/224379574596",
+    kakaoUrl: "http://place.map.kakao.com/13582387",
   },
   {
     id: "seoul-41",
@@ -1685,6 +1720,7 @@ export const roasteries: Roastery[] = [
     lat: 37.55327284237392,
     lng: 126.97671299473353,
     source: "https://blog.naver.com/tnwjdekt/224242428778",
+    kakaoUrl: "http://place.map.kakao.com/1203398226",
   },
   {
     id: "seoul-42",
@@ -1700,6 +1736,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5492993312323,
     lng: 126.976167648564,
     source: "https://blog.naver.com/moonjung923/224229327823",
+    kakaoUrl: "http://place.map.kakao.com/950697704",
   },
   {
     id: "seoul-43",
@@ -1715,6 +1752,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5104558068026,
     lng: 127.085276934885,
     source: "https://blog.naver.com/kyewon94/223112790888",
+    kakaoUrl: "http://place.map.kakao.com/438591937",
   },
   {
     id: "seoul-44",
@@ -1730,6 +1768,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5046384350542,
     lng: 127.08469917984,
     source: "https://blog.naver.com/kdfjgh12/224315607671",
+    kakaoUrl: "http://place.map.kakao.com/1581076865",
   },
   {
     id: "seoul-45",
@@ -1745,6 +1784,7 @@ export const roasteries: Roastery[] = [
     lat: 37.51241940739484,
     lng: 127.10193663089608,
     source: "https://blog.naver.com/sia_mom2025/224358918734",
+    kakaoUrl: "http://place.map.kakao.com/262949963",
   },
   {
     id: "seoul-46",
@@ -1760,6 +1800,7 @@ export const roasteries: Roastery[] = [
     lat: 37.51976524942709,
     lng: 126.93024150526786,
     source: "https://blog.naver.com/yaongii113/223754136059",
+    kakaoUrl: "http://place.map.kakao.com/1034310319",
   },
   {
     id: "seoul-47",
@@ -1775,6 +1816,7 @@ export const roasteries: Roastery[] = [
     lat: 37.5215291346376,
     lng: 126.92827267003909,
     source: "https://blog.naver.com/maniddo4001/223892319285",
+    kakaoUrl: "http://place.map.kakao.com/1524638990",
   },
   {
     id: "busan-24",
@@ -1790,6 +1832,7 @@ export const roasteries: Roastery[] = [
     lat: 35.102683869023664,
     lng: 129.03536212008981,
     source: "https://blog.naver.com/chodudal/224310409410",
+    kakaoUrl: "http://place.map.kakao.com/17198894",
   },
   {
     id: "busan-25",
@@ -1805,6 +1848,7 @@ export const roasteries: Roastery[] = [
     lat: 35.115086636262845,
     lng: 128.92223847257608,
     source: "https://blog.naver.com/qhfka1541/224355520617",
+    kakaoUrl: "http://place.map.kakao.com/1751208600",
   },
   {
     id: "busan-26",
@@ -1820,6 +1864,7 @@ export const roasteries: Roastery[] = [
     lat: 35.1040612141431,
     lng: 128.930359801005,
     source: "https://blog.naver.com/ohrr0806/224223718732",
+    kakaoUrl: "http://place.map.kakao.com/1806448595",
   },
   {
     id: "busan-27",
@@ -1835,6 +1880,7 @@ export const roasteries: Roastery[] = [
     lat: 35.09724531412787,
     lng: 128.9245903805042,
     source: "https://blog.naver.com/gwandjkt/223949027214",
+    kakaoUrl: "http://place.map.kakao.com/647412865",
   },
   {
     id: "jeju-25",
@@ -1850,6 +1896,7 @@ export const roasteries: Roastery[] = [
     lat: 33.5389883930352,
     lng: 126.835154510603,
     source: "https://blog.naver.com/zerooook/224259636477",
+    kakaoUrl: "http://place.map.kakao.com/2013969055",
   },
   {
     id: "jeju-26",
@@ -1865,6 +1912,7 @@ export const roasteries: Roastery[] = [
     lat: 33.523612689076906,
     lng: 126.8539570773748,
     source: "https://blog.naver.com/leolic/224339192149",
+    kakaoUrl: "http://place.map.kakao.com/877966090",
   },
   {
     id: "jeju-27",
@@ -1880,6 +1928,7 @@ export const roasteries: Roastery[] = [
     lat: 33.5200261116144,
     lng: 126.870137268842,
     source: "https://blog.naver.com/wlsaud1379/223803665811",
+    kakaoUrl: "http://place.map.kakao.com/146145213",
   },
   {
     id: "jeju-28",
@@ -1895,6 +1944,7 @@ export const roasteries: Roastery[] = [
     lat: 33.2485203216931,
     lng: 126.507130532437,
     source: "https://blog.naver.com/pooh1475963/223606856820",
+    kakaoUrl: "http://place.map.kakao.com/699666566",
   },
   {
     id: "jeju-29",
@@ -1910,6 +1960,7 @@ export const roasteries: Roastery[] = [
     lat: 33.4894381007656,
     lng: 126.478997707383,
     source: "https://blog.naver.com/howpc2001/224246311256",
+    kakaoUrl: "http://place.map.kakao.com/686748839",
   },
   {
     id: "jeju-30",
@@ -1925,6 +1976,7 @@ export const roasteries: Roastery[] = [
     lat: 33.480913514314,
     lng: 126.473867155839,
     source: "https://blog.naver.com/ljakdu2005/223326399870",
+    kakaoUrl: "http://place.map.kakao.com/223564528",
   },
   {
     id: "jeju-31",
@@ -1940,6 +1992,7 @@ export const roasteries: Roastery[] = [
     lat: 33.4834619690671,
     lng: 126.47399807674091,
     source: "https://blog.naver.com/duduworld88/224157957722",
+    kakaoUrl: "http://place.map.kakao.com/990338690",
   },
   {
     id: "gwangju-19",
@@ -1955,6 +2008,7 @@ export const roasteries: Roastery[] = [
     lat: 35.1720252827802,
     lng: 126.915591908662,
     source: "https://blog.naver.com/chwamari/224360337071",
+    kakaoUrl: "http://place.map.kakao.com/2099833800",
   },
   {
     id: "gwangju-20",
@@ -1970,6 +2024,7 @@ export const roasteries: Roastery[] = [
     lat: 35.1689446908308,
     lng: 126.910904651266,
     source: "https://blog.naver.com/herz_mp3/223648069464",
+    kakaoUrl: "http://place.map.kakao.com/527928279",
   },
   {
     id: "gwangju-21",
@@ -1985,6 +2040,7 @@ export const roasteries: Roastery[] = [
     lat: 35.167174394615145,
     lng: 126.91334999314238,
     source: "https://blog.naver.com/zlatjqkd/224369004450",
+    kakaoUrl: "http://place.map.kakao.com/134543002",
   },
   {
     id: "gwangju-22",
@@ -2000,6 +2056,7 @@ export const roasteries: Roastery[] = [
     lat: 35.12124983276552,
     lng: 126.88307393191695,
     source: "https://blog.naver.com/poou1299/223246598005",
+    kakaoUrl: "http://place.map.kakao.com/1216867185",
   },
   {
     id: "gwangju-23",
@@ -2015,6 +2072,7 @@ export const roasteries: Roastery[] = [
     lat: 35.1326376234739,
     lng: 126.894833955488,
     source: "https://blog.naver.com/gyals113/224262753811",
+    kakaoUrl: "http://place.map.kakao.com/1981068041",
   },
   {
     id: "gwangju-24",
@@ -2030,6 +2088,7 @@ export const roasteries: Roastery[] = [
     lat: 35.1467953074896,
     lng: 126.798623651759,
     source: "https://blog.naver.com/panda_0714/223969298733",
+    kakaoUrl: "http://place.map.kakao.com/269636451",
   },
   {
     id: "gwangju-25",
@@ -2045,6 +2104,7 @@ export const roasteries: Roastery[] = [
     lat: 35.15619755820945,
     lng: 126.811621459264,
     source: "https://blog.naver.com/kangnii/223763124971",
+    kakaoUrl: "http://place.map.kakao.com/828206800",
   },
   {
     id: "daejeon-18",
@@ -2060,6 +2120,7 @@ export const roasteries: Roastery[] = [
     lat: 36.3656407718317,
     lng: 127.317367579997,
     source: "https://blog.naver.com/guess18/223823277120",
+    kakaoUrl: "http://place.map.kakao.com/1976566156",
   },
   {
     id: "daejeon-19",
@@ -2075,6 +2136,7 @@ export const roasteries: Roastery[] = [
     lat: 36.374595046403506,
     lng: 127.32166869382334,
     source: "https://blog.naver.com/mrkvnykov20/223693422972",
+    kakaoUrl: "http://place.map.kakao.com/1252453159",
   },
   {
     id: "daegu-19",
@@ -2090,6 +2152,7 @@ export const roasteries: Roastery[] = [
     lat: 35.85500328336118,
     lng: 128.58342401337876,
     source: "https://blog.naver.com/tgmetro/223439331291",
+    kakaoUrl: "http://place.map.kakao.com/760517747",
   },
   {
     id: "daegu-20",
@@ -2105,6 +2168,7 @@ export const roasteries: Roastery[] = [
     lat: 35.88758277064622,
     lng: 128.58236713098037,
     source: "https://blog.naver.com/roma322/223901242519",
+    kakaoUrl: "http://place.map.kakao.com/37610837",
   },
 ];
 
