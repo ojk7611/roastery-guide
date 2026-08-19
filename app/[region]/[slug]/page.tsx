@@ -1,14 +1,24 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getRegion } from "@/lib/regions";
-import { getRoastery } from "@/data/roasteries";
+import { getRoastery, getRoasteriesByRegion } from "@/data/roasteries";
 import { SITE_URL } from "@/lib/site";
 import { getPrimaryPhotoUrl, getPhotoCacheEntry } from "@/lib/db";
 import { extractClosedDay } from "@/lib/hours";
+import { REGION_AREAS, ETC_LABEL, getAreaSlug } from "@/lib/region-areas";
 import KakaoMap from "@/components/KakaoMap";
 import RoasteryPhoto from "@/components/RoasteryPhoto";
 import RoasteryReviews from "@/components/RoasteryReviews";
+import RoasteryListSection from "@/components/RoasteryListSection";
 import SubmissionForm from "@/components/SubmissionForm";
+import type { Region } from "@/types/roastery";
+
+function findArea(region: Region, slug: string) {
+  if (slug === "etc") return { slug: "etc", label: null as string | null };
+  const area = REGION_AREAS[region]?.find((a) => a.slug === slug);
+  return area ? { slug: area.slug, label: area.label } : null;
+}
 
 async function photoUrl(slug: string) {
   const primary = await getPrimaryPhotoUrl(slug);
@@ -22,8 +32,29 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { region: regionSlug, slug } = await props.params;
   const region = getRegion(regionSlug);
-  const roastery = region && getRoastery(region.slug, slug);
-  if (!region || !roastery) return {};
+  if (!region) return {};
+
+  const area = findArea(region.slug, slug);
+  if (area) {
+    const label = area.label ?? ETC_LABEL[region.slug] ?? "기타";
+    const count = getRoasteriesByRegion(region.slug).filter(
+      (r) => getAreaSlug(region.slug, r) === area.slug,
+    ).length;
+    const title = `${label} 로스터리·드립커피 카페 ${count}곳`;
+    const description = `${region.label} ${label} 지역의 핸드드립·필터커피 로스터리 카페 ${count}곳을 위치, 영업시간, 시그니처 메뉴와 함께 모았습니다.`;
+    const url = `/${region.slug}/${slug}`;
+
+    return {
+      title,
+      description,
+      alternates: { canonical: url },
+      openGraph: { title, description, url },
+      twitter: { title, description },
+    };
+  }
+
+  const roastery = getRoastery(region.slug, slug);
+  if (!roastery) return {};
 
   const title = `${roastery.name} - ${region.label} ${roastery.neighborhood}`;
   const description = `${roastery.description} 주소: ${roastery.address}. 영업시간: ${roastery.hours}.`;
@@ -39,16 +70,73 @@ export async function generateMetadata(
   };
 }
 
-export default async function RoasteryPage(
+export default async function RegionSlugPage(
   props: PageProps<"/[region]/[slug]">,
 ) {
   const { region: regionSlug, slug } = await props.params;
   const region = getRegion(regionSlug);
-  const roastery = region && getRoastery(region.slug, slug);
+  if (!region) notFound();
 
-  if (!region || !roastery) {
-    notFound();
+  const area = findArea(region.slug, slug);
+  if (area) {
+    const label = area.label ?? ETC_LABEL[region.slug] ?? "기타";
+    const allAreas = REGION_AREAS[region.slug] ?? [];
+    const roasteries = getRoasteriesByRegion(region.slug).filter(
+      (r) => getAreaSlug(region.slug, r) === area.slug,
+    );
+
+    return (
+      <div className="mx-auto max-w-5xl px-6 py-16">
+        <p className="text-sm text-foreground/50">{region.label}</p>
+        <h1 className="mt-1 text-2xl font-semibold tracking-tight sm:text-3xl">
+          {label} 로스터리·드립커피 카페
+        </h1>
+        <p className="mt-2 text-foreground/70">
+          {region.label} {label} 지역의 핸드드립·필터커피 로스터리 카페 {roasteries.length}곳
+        </p>
+
+        <nav
+          aria-label={`${region.label} 세부 지역`}
+          className="mt-6 flex flex-wrap gap-2 text-sm"
+        >
+          <Link
+            href={`/${region.slug}`}
+            className="rounded-full bg-black/5 px-3 py-1.5 text-foreground/70 transition-colors hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/15"
+          >
+            전체
+          </Link>
+          {allAreas.map((a) => (
+            <Link
+              key={a.slug}
+              href={`/${region.slug}/${a.slug}`}
+              className={`rounded-full px-3 py-1.5 transition-colors ${
+                a.slug === area.slug
+                  ? "bg-foreground text-background"
+                  : "bg-black/5 text-foreground/70 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/15"
+              }`}
+            >
+              {a.label}
+            </Link>
+          ))}
+          <Link
+            href={`/${region.slug}/etc`}
+            className={`rounded-full px-3 py-1.5 transition-colors ${
+              area.slug === "etc"
+                ? "bg-foreground text-background"
+                : "bg-black/5 text-foreground/70 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/15"
+            }`}
+          >
+            {ETC_LABEL[region.slug] ?? "기타"}
+          </Link>
+        </nav>
+
+        <RoasteryListSection roasteries={roasteries} />
+      </div>
+    );
   }
+
+  const roastery = getRoastery(region.slug, slug);
+  if (!roastery) notFound();
 
   const [primaryPhotoUrl, photoCacheEntry] = await Promise.all([
     getPrimaryPhotoUrl(roastery.slug),

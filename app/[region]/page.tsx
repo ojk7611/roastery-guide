@@ -3,10 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getRegion } from "@/lib/regions";
 import { getRoasteriesByRegion } from "@/data/roasteries";
-import { REGION_AREAS, ETC_LABEL, getAreaSlug } from "@/lib/region-areas";
-import RoasteryCard from "@/components/RoasteryCard";
-import RegionExplorer from "@/components/RegionExplorer";
-import { getPrimaryPhotoMap, getPhotoCacheMap } from "@/lib/db";
+import { REGION_AREAS, ETC_LABEL } from "@/lib/region-areas";
+import RoasteryListSection from "@/components/RoasteryListSection";
 
 export async function generateMetadata(
   props: PageProps<"/[region]">,
@@ -30,28 +28,14 @@ export async function generateMetadata(
 
 export default async function RegionPage(props: PageProps<"/[region]">) {
   const { region: regionSlug } = await props.params;
-  const { area: areaParam } = await props.searchParams;
   const region = getRegion(regionSlug);
 
   if (!region) {
     notFound();
   }
 
-  const allRoasteries = getRoasteriesByRegion(region.slug);
+  const roasteries = getRoasteriesByRegion(region.slug);
   const areas = REGION_AREAS[region.slug];
-  const selectedArea =
-    areas && typeof areaParam === "string" ? areaParam : null;
-
-  const roasteries = selectedArea
-    ? allRoasteries.filter(
-        (r) => getAreaSlug(region.slug, r) === selectedArea,
-      )
-    : allRoasteries;
-
-  const [primaryPhotoMap, photoCacheMap] = await Promise.all([
-    getPrimaryPhotoMap(),
-    getPhotoCacheMap(),
-  ]);
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
@@ -65,65 +49,25 @@ export default async function RegionPage(props: PageProps<"/[region]">) {
           aria-label={`${region.label} 세부 지역`}
           className="mt-6 flex flex-wrap gap-2 text-sm"
         >
-          <Link
-            href={`/${region.slug}`}
-            className={`rounded-full px-3 py-1.5 transition-colors ${
-              selectedArea === null
-                ? "bg-foreground text-background"
-                : "bg-black/5 text-foreground/70 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/15"
-            }`}
-          >
-            전체
-          </Link>
           {areas.map((area) => (
             <Link
               key={area.slug}
-              href={`/${region.slug}?area=${area.slug}`}
-              className={`rounded-full px-3 py-1.5 transition-colors ${
-                selectedArea === area.slug
-                  ? "bg-foreground text-background"
-                  : "bg-black/5 text-foreground/70 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/15"
-              }`}
+              href={`/${region.slug}/${area.slug}`}
+              className="rounded-full bg-black/5 px-3 py-1.5 text-foreground/70 transition-colors hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/15"
             >
               {area.label}
             </Link>
           ))}
           <Link
-            href={`/${region.slug}?area=etc`}
-            className={`rounded-full px-3 py-1.5 transition-colors ${
-              selectedArea === "etc"
-                ? "bg-foreground text-background"
-                : "bg-black/5 text-foreground/70 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/15"
-            }`}
+            href={`/${region.slug}/etc`}
+            className="rounded-full bg-black/5 px-3 py-1.5 text-foreground/70 transition-colors hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/15"
           >
             {ETC_LABEL[region.slug] ?? "기타"}
           </Link>
         </nav>
       )}
 
-      <RegionExplorer roasteries={roasteries} />
-
-      <div className="mt-10 grid gap-4 sm:grid-cols-2">
-        {roasteries.map((roastery) => {
-          const cached = photoCacheMap[roastery.slug];
-          return (
-            <RoasteryCard
-              key={roastery.id}
-              roastery={roastery}
-              photoOverrideUrl={primaryPhotoMap[roastery.slug] ?? null}
-              googlePhoto={
-                cached
-                  ? {
-                      url: cached.blobUrl,
-                      authorName: cached.authorName,
-                      authorUri: cached.authorUri,
-                    }
-                  : null
-              }
-            />
-          );
-        })}
-      </div>
+      <RoasteryListSection roasteries={roasteries} />
     </div>
   );
 }

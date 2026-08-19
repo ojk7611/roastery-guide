@@ -24,6 +24,41 @@ export const REGION_AREAS: Partial<Record<Region, RegionArea[]>> = {
     { slug: "suncheon", label: "순천", keywords: ["순천"] },
     { slug: "mokpo", label: "목포", keywords: ["목포"] },
   ],
+  busan: [
+    { slug: "jeonpo", label: "전포", keywords: ["전포"] },
+    { slug: "gwangalli", label: "광안리", keywords: ["광안리", "남천"] },
+    { slug: "haeundae", label: "해운대", keywords: ["해운대", "해리단길"] },
+    {
+      slug: "wondosim",
+      label: "남포·중앙동",
+      keywords: ["남포", "중앙동", "40계단", "부민동", "영도"],
+    },
+    {
+      slug: "dongnae-geumjeong",
+      label: "동래·금정",
+      keywords: ["동래", "온천장", "장전", "만덕", "금정"],
+    },
+    { slug: "myeongji", label: "명지", keywords: ["명지"] },
+    { slug: "seogu", label: "암남·송도", keywords: ["암남", "송도", "서구"] },
+  ],
+  gwangju: [
+    { slug: "dongmyeong", label: "동명동", keywords: ["동명동"] },
+    { slug: "sangmu", label: "상무지구", keywords: ["상무지구", "농성동"] },
+    { slug: "cheomdan", label: "첨단지구", keywords: ["첨단지구"] },
+    { slug: "baekwoon", label: "백운동", keywords: ["백운동"] },
+    { slug: "sansu-jisan", label: "산수·지산동", keywords: ["산수동", "지산동"] },
+    { slug: "chungjangno", label: "충장로", keywords: ["충장로"] },
+    { slug: "hwajeong", label: "화정동", keywords: ["화정동"] },
+  ],
+  jeju: [
+    { slug: "aewol", label: "애월", keywords: ["애월"] },
+    { slug: "nohyeong", label: "노형동", keywords: ["노형동", "원노형"] },
+    { slug: "gujwa", label: "구좌", keywords: ["구좌"] },
+    { slug: "jocheon", label: "조천", keywords: ["조천"] },
+    { slug: "hallim", label: "한림·협재", keywords: ["한림", "협재"] },
+    { slug: "seogwipo", label: "서귀포", keywords: ["서귀포", "성산읍", "법환동", "표선"] },
+    { slug: "jejusi", label: "제주시", keywords: ["제주시", "공항", "화북동", "영평동"] },
+  ],
 };
 
 export const ETC_LABEL: Partial<Record<Region, string>> = {
