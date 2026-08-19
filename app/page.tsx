@@ -2,6 +2,7 @@ import Link from "next/link";
 import { regions } from "@/lib/regions";
 import { getRoasteriesByRegion } from "@/data/roasteries";
 import RegionMap from "@/components/RegionMap";
+import RoasterySuggestionForm from "@/components/RoasterySuggestionForm";
 
 export default function Home() {
   return (
@@ -16,8 +17,13 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="mx-auto mt-12 max-w-md">
-        <RegionMap />
+      <section className="mt-12 flex flex-col items-center gap-8 lg:flex-row lg:items-start lg:justify-center">
+        <div className="w-full max-w-md">
+          <RegionMap />
+        </div>
+        <div className="w-full max-w-sm">
+          <RoasterySuggestionForm />
+        </div>
       </section>
 
       <section className="mt-12 grid gap-4 sm:grid-cols-3">

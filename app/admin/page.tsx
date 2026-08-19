@@ -1,9 +1,16 @@
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { isAdmin } from "@/lib/admin-auth";
-import { getPendingSubmissions } from "@/lib/db";
+import { getPendingSubmissions, getPendingRoasterySuggestions } from "@/lib/db";
+import { getRegion } from "@/lib/regions";
 import { roasteries } from "@/data/roasteries";
-import { approve, reject, logout, makePrimaryPhoto } from "@/app/admin/actions";
+import {
+  approve,
+  reject,
+  logout,
+  makePrimaryPhoto,
+  markSuggestionDone,
+} from "@/app/admin/actions";
 import StarRating from "@/components/StarRating";
 
 export default async function AdminPage() {
@@ -11,7 +18,10 @@ export default async function AdminPage() {
     redirect("/admin/login");
   }
 
-  const submissions = await getPendingSubmissions();
+  const [submissions, suggestions] = await Promise.all([
+    getPendingSubmissions(),
+    getPendingRoasterySuggestions(),
+  ]);
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-16">
@@ -105,6 +115,65 @@ export default async function AdminPage() {
             </div>
           );
         })}
+      </div>
+
+      <div className="mt-16">
+        <h2 className="text-xl font-semibold">
+          숨은 로스터리 제보 ({suggestions.length})
+        </h2>
+
+        {suggestions.length === 0 && (
+          <p className="mt-4 text-sm text-foreground/60">
+            대기 중인 제보가 없어요.
+          </p>
+        )}
+
+        <div className="mt-4 space-y-4">
+          {suggestions.map((s) => (
+            <div
+              key={s.id}
+              className="rounded-xl border border-black/10 p-4 dark:border-white/10"
+            >
+              <p className="text-sm font-medium">
+                {s.name}{" "}
+                {s.region && (
+                  <span className="font-normal text-foreground/40">
+                    · {getRegion(s.region)?.label ?? s.region}
+                  </span>
+                )}
+              </p>
+
+              {s.reviewText && (
+                <p className="mt-2 text-sm text-foreground/80">
+                  {s.reviewText}
+                </p>
+              )}
+
+              {s.photoUrl && (
+                <div className="relative mt-3 h-40 w-full overflow-hidden rounded-lg">
+                  <Image
+                    src={s.photoUrl}
+                    alt=""
+                    fill
+                    sizes="600px"
+                    className="object-cover"
+                  />
+                </div>
+              )}
+
+              <div className="mt-3">
+                <form action={markSuggestionDone.bind(null, s.id)}>
+                  <button
+                    type="submit"
+                    className="rounded-full bg-black/5 px-3 py-1.5 text-xs text-foreground/70 dark:bg-white/10"
+                  >
+                    처리완료
+                  </button>
+                </form>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -20,6 +20,17 @@ export interface Submission {
   createdAt: string;
 }
 
+export interface RoasterySuggestion {
+  id: number;
+  name: string;
+  region: string | null;
+  reviewText: string | null;
+  photoUrl: string | null;
+  photoConsent: boolean;
+  status: "pending" | "done";
+  createdAt: string;
+}
+
 function getDatabaseUrl() {
   // Neon's Vercel integration provisions POSTGRES_URL; some setups use
   // DATABASE_URL instead. Accept either.
@@ -72,9 +83,78 @@ async function ensureSchema(sql: NonNullable<ReturnType<typeof getSql>>) {
           fetched_at TIMESTAMPTZ NOT NULL DEFAULT now()
         )
       `;
+      // 아직 사이트에 없는 로스터리를 알려주는 "숨은 로스터리 제보".
+      // 기존 submissions(등록된 카페의 사진/후기)와는 별개 표다 — 여기
+      // 들어온 항목은 검토 후 사람이 직접 조사해서 data/roasteries.ts에
+      // 추가해야 하므로 자동 게시 흐름이 없다.
+      await sql`
+        CREATE TABLE IF NOT EXISTS roastery_suggestions (
+          id SERIAL PRIMARY KEY,
+          name TEXT NOT NULL,
+          region TEXT,
+          review_text TEXT,
+          photo_url TEXT,
+          photo_consent BOOLEAN NOT NULL DEFAULT false,
+          status TEXT NOT NULL DEFAULT 'pending',
+          created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+        )
+      `;
     })();
   }
   await schemaReady;
+}
+
+function mapSuggestionRow(row: Record<string, unknown>): RoasterySuggestion {
+  return {
+    id: row.id as number,
+    name: row.name as string,
+    region: row.region as string | null,
+    reviewText: row.review_text as string | null,
+    photoUrl: row.photo_url as string | null,
+    photoConsent: row.photo_consent as boolean,
+    status: row.status as RoasterySuggestion["status"],
+    createdAt: row.created_at as string,
+  };
+}
+
+export async function insertRoasterySuggestion(input: {
+  name: string;
+  region: string | null;
+  reviewText: string | null;
+  photoUrl: string | null;
+  photoConsent: boolean;
+}) {
+  const sql = getSql();
+  if (!sql) throw new Error("DATABASE_URL이 설정되지 않았습니다.");
+  await ensureSchema(sql);
+
+  await sql`
+    INSERT INTO roastery_suggestions (name, region, review_text, photo_url, photo_consent, status)
+    VALUES (${input.name}, ${input.region}, ${input.reviewText}, ${input.photoUrl}, ${input.photoConsent}, 'pending')
+  `;
+}
+
+export async function getPendingRoasterySuggestions(): Promise<
+  RoasterySuggestion[]
+> {
+  const sql = getSql();
+  if (!sql) return [];
+  await ensureSchema(sql);
+
+  const rows = await sql`
+    SELECT * FROM roastery_suggestions
+    WHERE status = 'pending'
+    ORDER BY created_at ASC
+  `;
+  return rows.map(mapSuggestionRow);
+}
+
+export async function setRoasterySuggestionDone(id: number) {
+  const sql = getSql();
+  if (!sql) throw new Error("DATABASE_URL이 설정되지 않았습니다.");
+  await ensureSchema(sql);
+
+  await sql`UPDATE roastery_suggestions SET status = 'done' WHERE id = ${id}`;
 }
 
 function mapPhotoCacheRow(row: Record<string, unknown>): PhotoCacheEntry {

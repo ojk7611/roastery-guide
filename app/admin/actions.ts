@@ -3,7 +3,11 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { setSubmissionStatus, setPrimaryPhoto } from "@/lib/db";
+import {
+  setSubmissionStatus,
+  setPrimaryPhoto,
+  setRoasterySuggestionDone,
+} from "@/lib/db";
 import { ADMIN_COOKIE_NAME } from "@/lib/admin-auth";
 import { roasteries } from "@/data/roasteries";
 
@@ -52,4 +56,9 @@ export async function makePrimaryPhoto(id: number, roasterySlug: string) {
     revalidatePath(`/${roastery.region}`);
     revalidatePath(`/${roastery.region}/${roastery.slug}`);
   }
+}
+
+export async function markSuggestionDone(id: number) {
+  await setRoasterySuggestionDone(id);
+  revalidatePath("/admin");
 }
