@@ -5,6 +5,7 @@ import { getRegion } from "@/lib/regions";
 import { getRoasteriesByRegion } from "@/data/roasteries";
 import { REGION_AREAS, ETC_LABEL } from "@/lib/region-areas";
 import RoasteryListSection from "@/components/RoasteryListSection";
+import HotSection from "@/components/HotSection";
 
 export async function generateMetadata(
   props: PageProps<"/[region]">,
@@ -43,6 +44,14 @@ export default async function RegionPage(props: PageProps<"/[region]">) {
         {region.label} 로스터리
       </h1>
       <p className="mt-2 text-foreground/70">{region.description}</p>
+
+      <HotSection
+        roasteries={roasteries}
+        title={`🔥 ${region.label} HOT`}
+        subtitle={`최근 ${region.label}에서 많이 찾는 로스터리`}
+        count={3}
+        showRegionLabel={false}
+      />
 
       {areas && (
         <nav

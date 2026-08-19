@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { regions } from "@/lib/regions";
-import { getRoasteriesByRegion } from "@/data/roasteries";
+import { roasteries, getRoasteriesByRegion } from "@/data/roasteries";
 import RegionMap from "@/components/RegionMap";
 import RoasterySuggestionForm from "@/components/RoasterySuggestionForm";
 import HotSection from "@/components/HotSection";
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </section>
 
-      <HotSection />
+      <HotSection roasteries={roasteries} />
 
       <section className="mt-12 grid gap-4 sm:grid-cols-3">
         {regions.map((region) => {
