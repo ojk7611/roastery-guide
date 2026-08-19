@@ -4,11 +4,17 @@ import { notFound } from "next/navigation";
 import { getRegion } from "@/lib/regions";
 import { getRoastery, getRoasteriesByRegion } from "@/data/roasteries";
 import { SITE_URL } from "@/lib/site";
-import { getPrimaryPhotoUrl, getPhotoCacheEntry } from "@/lib/db";
+import {
+  getPrimaryPhotoUrl,
+  getPhotoCacheEntry,
+  getApprovedSubmissions,
+} from "@/lib/db";
 import { extractClosedDay } from "@/lib/hours";
 import { REGION_AREAS, ETC_LABEL, getAreaSlug } from "@/lib/region-areas";
 import KakaoMap from "@/components/KakaoMap";
 import RoasteryPhoto from "@/components/RoasteryPhoto";
+import RoasteryPhotoTabs from "@/components/RoasteryPhotoTabs";
+import RoasteryPhotoGallery from "@/components/RoasteryPhotoGallery";
 import RoasteryReviews from "@/components/RoasteryReviews";
 import RoasteryListSection from "@/components/RoasteryListSection";
 import SubmissionForm from "@/components/SubmissionForm";
@@ -138,10 +144,12 @@ export default async function RegionSlugPage(
   const roastery = getRoastery(region.slug, slug);
   if (!roastery) notFound();
 
-  const [primaryPhotoUrl, photoCacheEntry] = await Promise.all([
+  const [primaryPhotoUrl, photoCacheEntry, submissions] = await Promise.all([
     getPrimaryPhotoUrl(roastery.slug),
     getPhotoCacheEntry(roastery.slug),
+    getApprovedSubmissions(roastery.slug),
   ]);
+  const photosWithImage = submissions.filter((s) => s.photoUrl !== null);
   const image =
     primaryPhotoUrl ?? photoCacheEntry?.blobUrl ?? `${SITE_URL}/brand/flower-mark.png`;
 
@@ -180,22 +188,30 @@ export default async function RegionSlugPage(
           {roastery.name}
         </h1>
 
-        <RoasteryPhoto
-          slug={roastery.slug}
-          name={roastery.name}
-          className="relative mt-6 h-64 w-full"
-          overrideUrl={primaryPhotoUrl}
-          googlePhoto={
-            photoCacheEntry
-              ? {
-                  url: photoCacheEntry.blobUrl,
-                  authorName: photoCacheEntry.authorName,
-                  authorUri: photoCacheEntry.authorUri,
+        <div className="mt-6">
+          <RoasteryPhotoTabs
+            galleryCount={photosWithImage.length}
+            heroContent={
+              <RoasteryPhoto
+                slug={roastery.slug}
+                name={roastery.name}
+                className="relative h-64 w-full"
+                overrideUrl={primaryPhotoUrl}
+                googlePhoto={
+                  photoCacheEntry
+                    ? {
+                        url: photoCacheEntry.blobUrl,
+                        authorName: photoCacheEntry.authorName,
+                        authorUri: photoCacheEntry.authorUri,
+                      }
+                    : null
                 }
-              : null
-          }
-          emptyStateHref="#submit-form"
-        />
+                emptyStateHref="#submit-form"
+              />
+            }
+            galleryContent={<RoasteryPhotoGallery photos={photosWithImage} />}
+          />
+        </div>
 
         {(() => {
           const link = roastery.officialLink ?? roastery.kakaoUrl;
@@ -260,7 +276,7 @@ export default async function RegionSlugPage(
           markers={[{ lat: roastery.lat, lng: roastery.lng, name: roastery.name }]}
         />
 
-        <RoasteryReviews roasterySlug={roastery.slug} />
+        <RoasteryReviews submissions={submissions} />
 
         <div className="mt-8">
           <SubmissionForm roasterySlug={roastery.slug} />

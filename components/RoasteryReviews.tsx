@@ -1,14 +1,12 @@
 import Image from "next/image";
-import { getApprovedSubmissions } from "@/lib/db";
+import type { Submission } from "@/lib/db";
 import StarRating from "./StarRating";
 
-export default async function RoasteryReviews({
-  roasterySlug,
+export default function RoasteryReviews({
+  submissions,
 }: {
-  roasterySlug: string;
+  submissions: Submission[];
 }) {
-  const submissions = await getApprovedSubmissions(roasterySlug);
-
   if (submissions.length === 0) return null;
 
   const ratings = submissions
