@@ -3942,6 +3942,21 @@ export const roasteries: Roastery[] = [
     source: "https://www.diningcode.com/profile.php?rid=swdSG3LZ6qZb",
     kakaoUrl: "http://place.map.kakao.com/1905990863",
   },
+  {
+    id: "gwangju-28",
+    slug: "paji-bukdong",
+    name: "파지",
+    region: "gwangju",
+    neighborhood: "북동(북구)",
+    address: "광주 북구 제봉로 257",
+    hours: "확인 필요",
+    tags: ["북동", "로스터리"],
+    description: "북구 제봉로의 로스터리 카페다.",
+    signature: ["드립커피"],
+    lat: 35.1575492278311,
+    lng: 126.911472432557,
+    kakaoUrl: "http://place.map.kakao.com/1390197364",
+  },
 ];
 
 export function getRoasteriesByRegion(region: string) {
