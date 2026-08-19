@@ -3957,6 +3957,22 @@ export const roasteries: Roastery[] = [
     lng: 126.911472432557,
     kakaoUrl: "http://place.map.kakao.com/1390197364",
   },
+  {
+    id: "gwangju-29",
+    slug: "muhae-dongmyeong",
+    name: "무해",
+    region: "gwangju",
+    neighborhood: "동명동(동구)",
+    address: "광주 동구 동계로 6",
+    hours: "12:00 - 23:00 (월요일 정기휴무)",
+    tags: ["동명동", "드립커피", "신상카페"],
+    description: "동명동 카페거리의 로스터리 카페로, 드립커피를 다루는 곳으로 알려져 있다.",
+    signature: ["드립커피"],
+    lat: 35.1522417392117,
+    lng: 126.92436355791,
+    source: "https://www.instagram.com/muhae_coffee",
+    kakaoUrl: "http://place.map.kakao.com/4467910",
+  },
 ];
 
 export function getRoasteriesByRegion(region: string) {
