@@ -16,6 +16,7 @@ export interface Submission {
   rating: number | null;
   status: "pending" | "approved" | "rejected";
   isPrimaryPhoto: boolean;
+  photoConsent: boolean;
   createdAt: string;
 }
 
@@ -53,6 +54,11 @@ async function ensureSchema(sql: NonNullable<ReturnType<typeof getSql>>) {
       `;
       await sql`
         ALTER TABLE submissions ADD COLUMN IF NOT EXISTS is_primary_photo BOOLEAN NOT NULL DEFAULT false
+      `;
+      // 사진이 첨부된 제보는 촬영자 본인 확인 + 사용 동의 체크박스를
+      // 통과해야만 서버에서도 저장되도록, 동의 여부를 함께 기록한다.
+      await sql`
+        ALTER TABLE submissions ADD COLUMN IF NOT EXISTS photo_consent BOOLEAN NOT NULL DEFAULT false
       `;
       // 구글 Places API 사진 캐시. 저작자 표시 의무 + 30일 이상 캐시 금지
       // 약관을 지키기 위해, 사진은 Vercel Blob에 두고 이 표에는 URL과
@@ -162,6 +168,7 @@ function mapRow(row: Record<string, unknown>): Submission {
     rating: row.rating as number | null,
     status: row.status as Submission["status"],
     isPrimaryPhoto: row.is_primary_photo as boolean,
+    photoConsent: row.photo_consent as boolean,
     createdAt: row.created_at as string,
   };
 }
@@ -172,14 +179,15 @@ export async function insertSubmission(input: {
   reviewText: string | null;
   photoUrl: string | null;
   rating: number | null;
+  photoConsent: boolean;
 }) {
   const sql = getSql();
   if (!sql) throw new Error("DATABASE_URL이 설정되지 않았습니다.");
   await ensureSchema(sql);
 
   await sql`
-    INSERT INTO submissions (roastery_slug, author_name, review_text, photo_url, rating, status)
-    VALUES (${input.roasterySlug}, ${input.authorName}, ${input.reviewText}, ${input.photoUrl}, ${input.rating}, 'pending')
+    INSERT INTO submissions (roastery_slug, author_name, review_text, photo_url, rating, photo_consent, status)
+    VALUES (${input.roasterySlug}, ${input.authorName}, ${input.reviewText}, ${input.photoUrl}, ${input.rating}, ${input.photoConsent}, 'pending')
   `;
 }
 

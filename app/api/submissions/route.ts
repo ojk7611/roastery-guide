@@ -20,6 +20,7 @@ export async function POST(request: NextRequest) {
   const reviewText = formData.get("reviewText");
   const photo = formData.get("photo");
   const ratingRaw = formData.get("rating");
+  const photoConsent = formData.get("photoConsent") === "true";
 
   if (typeof roasterySlug !== "string" || !roasteries.some((r) => r.slug === roasterySlug)) {
     return NextResponse.json({ error: "잘못된 로스터리입니다." }, { status: 400 });
@@ -51,6 +52,13 @@ export async function POST(request: NextRequest) {
   let photoUrl: string | null = null;
 
   if (hasPhoto) {
+    if (!photoConsent) {
+      return NextResponse.json(
+        { error: "사진 저작권 동의 항목을 체크해주세요." },
+        { status: 400 },
+      );
+    }
+
     const file = photo as File;
 
     if (!ALLOWED_PHOTO_TYPES.includes(file.type)) {
@@ -81,6 +89,7 @@ export async function POST(request: NextRequest) {
     reviewText: trimmedReview,
     photoUrl,
     rating,
+    photoConsent: hasPhoto ? photoConsent : false,
   });
 
   return NextResponse.json({ ok: true });

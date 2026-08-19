@@ -194,6 +194,7 @@ export default async function RegionSlugPage(
                 }
               : null
           }
+          emptyStateHref="#submit-form"
         />
 
         {(() => {

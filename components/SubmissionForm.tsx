@@ -12,14 +12,25 @@ export default function SubmissionForm({
     "idle" | "submitting" | "done" | "error"
   >("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [hasPhoto, setHasPhoto] = useState(false);
+  const [consentOwnership, setConsentOwnership] = useState(false);
+  const [consentUsage, setConsentUsage] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("submitting");
     setErrorMessage("");
 
+    if (hasPhoto && (!consentOwnership || !consentUsage)) {
+      setStatus("error");
+      setErrorMessage("사진 저작권 동의 항목을 모두 체크해주세요.");
+      return;
+    }
+
+    setStatus("submitting");
+
     const formData = new FormData(e.currentTarget);
+    formData.set("photoConsent", String(hasPhoto && consentOwnership && consentUsage));
 
     try {
       const res = await fetch("/api/submissions", {
@@ -36,6 +47,9 @@ export default function SubmissionForm({
 
       setStatus("done");
       formRef.current?.reset();
+      setHasPhoto(false);
+      setConsentOwnership(false);
+      setConsentUsage(false);
     } catch {
       setStatus("error");
       setErrorMessage("제출 중 문제가 발생했어요. 잠시 후 다시 시도해주세요.");
@@ -44,7 +58,10 @@ export default function SubmissionForm({
 
   if (status === "done") {
     return (
-      <div className="rounded-xl border border-black/10 p-5 text-sm text-foreground/70 dark:border-white/10">
+      <div
+        id="submit-form"
+        className="rounded-xl border border-black/10 p-5 text-sm text-foreground/70 dark:border-white/10"
+      >
         제보 감사합니다! 검토 후 게시됩니다.
       </div>
     );
@@ -52,15 +69,18 @@ export default function SubmissionForm({
 
   return (
     <form
+      id="submit-form"
       ref={formRef}
       onSubmit={handleSubmit}
-      className="rounded-xl border border-black/10 p-5 dark:border-white/10"
+      className="scroll-mt-6 rounded-xl border border-black/10 p-5 dark:border-white/10"
     >
       <input type="hidden" name="roasterySlug" value={roasterySlug} />
 
-      <p className="text-sm font-medium">사진이나 후기 제보하기</p>
+      <p className="text-sm font-medium">📸 방문 사진 &amp; 후기 제보</p>
       <p className="mt-1 text-xs text-foreground/50">
-        검토 후 게시돼요. 방문 사진, 시그니처 메뉴 후기 등을 자유롭게 남겨주세요.
+        직접 방문한 카페의 사진과 후기를 남겨주세요.
+        <br />
+        선정된 사진은 요새여기 로스터리 소개 페이지에 게시됩니다.
       </p>
 
       <div className="mt-4 space-y-3">
@@ -86,8 +106,33 @@ export default function SubmissionForm({
           type="file"
           name="photo"
           accept="image/jpeg,image/png,image/webp"
+          onChange={(e) => setHasPhoto(e.currentTarget.files !== null && e.currentTarget.files.length > 0)}
           className="w-full text-sm text-foreground/70 file:mr-3 file:rounded-full file:border-0 file:bg-black/5 file:px-3 file:py-1.5 file:text-xs file:text-foreground/70 dark:file:bg-white/10"
         />
+
+        {hasPhoto && (
+          <div className="space-y-2 rounded-lg bg-black/[.03] p-3 dark:bg-white/[.05]">
+            <label className="flex items-start gap-2 text-xs text-foreground/70">
+              <input
+                type="checkbox"
+                checked={consentOwnership}
+                onChange={(e) => setConsentOwnership(e.currentTarget.checked)}
+                className="mt-0.5"
+              />
+              본인이 직접 촬영했거나 사용 권한을 보유한 사진입니다.
+            </label>
+            <label className="flex items-start gap-2 text-xs text-foreground/70">
+              <input
+                type="checkbox"
+                checked={consentUsage}
+                onChange={(e) => setConsentUsage(e.currentTarget.checked)}
+                className="mt-0.5"
+              />
+              제출한 사진을 요새여기가 웹사이트 및 공식 SNS의 로스터리
+              소개·후기 목적으로 사용하는 것에 동의합니다.
+            </label>
+          </div>
+        )}
       </div>
 
       {status === "error" && (
