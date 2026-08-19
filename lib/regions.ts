@@ -54,7 +54,7 @@ export const regions: RegionMeta[] = [
   {
     slug: "jeolla",
     label: "전라",
-    description: "전주・군산 등 호남 내륙의 로스터리 카페",
+    description: "전주・군산・여수・순천・목포 등 전남・전북 전역의 로스터리 카페",
   },
   {
     slug: "gyeongsang",

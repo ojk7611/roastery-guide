@@ -55,6 +55,9 @@ export default function RegionMap() {
           const [cx, cy] = REGION_CENTROIDS[slug];
           const isDot = DOT_REGIONS.has(region.slug);
           const hitRadius = HIT_RADIUS[region.slug];
+          const scaleClass = hitRadius
+            ? "group-hover:scale-150"
+            : "group-hover:scale-110";
 
           return (
             <Link
@@ -65,7 +68,8 @@ export default function RegionMap() {
               <title>{`${region.label} · 로스터리 ${count}곳`}</title>
               <path
                 d={REGION_PATHS[slug]}
-                className="fill-black/[.06] stroke-background transition-colors group-hover:fill-foreground/70 group-focus-visible:fill-foreground/70 dark:fill-white/[.12]"
+                className={`fill-black/[.06] stroke-background transition duration-150 ease-out ${scaleClass} group-hover:fill-foreground/70 group-focus-visible:fill-foreground/70 dark:fill-white/[.12]`}
+                style={{ transformOrigin: `${cx}px ${cy}px` }}
                 strokeWidth={1.5}
               />
               {hitRadius && (
@@ -78,7 +82,7 @@ export default function RegionMap() {
                 />
               )}
               <g
-                className={`pointer-events-none${hitRadius ? " transition-transform duration-150 ease-out group-hover:scale-150" : ""}`}
+                className={`pointer-events-none transition-transform duration-150 ease-out ${scaleClass}`}
                 style={{ transformOrigin: `${cx}px ${cy}px` }}
               >
                 {isDot ? (

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getRegion } from "@/lib/regions";
 import { getRoasteriesByRegion } from "@/data/roasteries";
-import { seoulAreas, getSeoulAreaSlug } from "@/lib/seoul-areas";
+import { REGION_AREAS, ETC_LABEL, getAreaSlug } from "@/lib/region-areas";
 import RoasteryCard from "@/components/RoasteryCard";
 import RegionExplorer from "@/components/RegionExplorer";
 import { getPrimaryPhotoMap } from "@/lib/db";
@@ -38,13 +38,13 @@ export default async function RegionPage(props: PageProps<"/[region]">) {
   }
 
   const allRoasteries = getRoasteriesByRegion(region.slug);
-  const isSeoul = region.slug === "seoul";
+  const areas = REGION_AREAS[region.slug];
   const selectedArea =
-    isSeoul && typeof areaParam === "string" ? areaParam : null;
+    areas && typeof areaParam === "string" ? areaParam : null;
 
   const roasteries = selectedArea
     ? allRoasteries.filter(
-        (r) => getSeoulAreaSlug(r.neighborhood) === selectedArea,
+        (r) => getAreaSlug(region.slug, r) === selectedArea,
       )
     : allRoasteries;
 
@@ -57,13 +57,13 @@ export default async function RegionPage(props: PageProps<"/[region]">) {
       </h1>
       <p className="mt-2 text-foreground/70">{region.description}</p>
 
-      {isSeoul && (
+      {areas && (
         <nav
-          aria-label="서울 세부 지역"
+          aria-label={`${region.label} 세부 지역`}
           className="mt-6 flex flex-wrap gap-2 text-sm"
         >
           <Link
-            href="/seoul"
+            href={`/${region.slug}`}
             className={`rounded-full px-3 py-1.5 transition-colors ${
               selectedArea === null
                 ? "bg-foreground text-background"
@@ -72,10 +72,10 @@ export default async function RegionPage(props: PageProps<"/[region]">) {
           >
             전체
           </Link>
-          {seoulAreas.map((area) => (
+          {areas.map((area) => (
             <Link
               key={area.slug}
-              href={`/seoul?area=${area.slug}`}
+              href={`/${region.slug}?area=${area.slug}`}
               className={`rounded-full px-3 py-1.5 transition-colors ${
                 selectedArea === area.slug
                   ? "bg-foreground text-background"
@@ -86,14 +86,14 @@ export default async function RegionPage(props: PageProps<"/[region]">) {
             </Link>
           ))}
           <Link
-            href="/seoul?area=etc"
+            href={`/${region.slug}?area=etc`}
             className={`rounded-full px-3 py-1.5 transition-colors ${
               selectedArea === "etc"
                 ? "bg-foreground text-background"
                 : "bg-black/5 text-foreground/70 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/15"
             }`}
           >
-            기타
+            {ETC_LABEL[region.slug] ?? "기타"}
           </Link>
         </nav>
       )}
