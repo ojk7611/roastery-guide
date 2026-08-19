@@ -356,6 +356,32 @@ export async function getPrimaryPhotoUrl(
   return rows.length > 0 ? (rows[0].photo_url as string) : null;
 }
 
+// "요새 HOT" 섹션이 지금 실제로 쓸 수 있는 유일한 참여 신호 — 로스터리별
+// 승인된 제보(후기·별점) 개수와 평균 평점. 조회수·검색량·인스타 언급량
+// 같은 나머지 지표는 아직 수집 파이프라인이 없어서 넣지 못한다.
+export async function getReviewStatsMap(): Promise<
+  Record<string, { count: number; avgRating: number | null }>
+> {
+  const sql = getSql();
+  if (!sql) return {};
+  await ensureSchema(sql);
+
+  const rows = await sql`
+    SELECT roastery_slug, COUNT(*) as count, AVG(rating) as avg_rating
+    FROM submissions
+    WHERE status = 'approved'
+    GROUP BY roastery_slug
+  `;
+  const map: Record<string, { count: number; avgRating: number | null }> = {};
+  for (const row of rows) {
+    map[row.roastery_slug as string] = {
+      count: Number(row.count),
+      avgRating: row.avg_rating !== null ? Number(row.avg_rating) : null,
+    };
+  }
+  return map;
+}
+
 export function isDbConfigured() {
   return !!getDatabaseUrl();
 }
