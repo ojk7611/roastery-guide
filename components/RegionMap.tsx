@@ -19,21 +19,27 @@ const SHORT_LABEL: Partial<Record<Region, string>> = {
   chungcheong: "충청",
 };
 
-// 지도 위에 글자를 새기기엔 너무 작은 지역(서울/대전/대구/인천)은
+// 지도 위에 글자를 새기기엔 너무 작은 지역(서울/대전/대구/인천/광주)은
 // 텍스트 대신 작은 점으로 표시한다. 이름은 hover 툴팁과 아래 범례에서
-// 확인할 수 있다. 서울·인천은 서로 붙어 있어 라벨이 겹치기 쉽다.
-const DOT_REGIONS = new Set<Region>(["seoul", "daejeon", "daegu", "incheon"]);
+// 확인할 수 있다. 서울·인천, 광주·전라는 서로 붙어 있어 라벨이 겹치기 쉽다.
+const DOT_REGIONS = new Set<Region>([
+  "seoul",
+  "daejeon",
+  "daegu",
+  "incheon",
+  "gwangju",
+]);
 
 // 실제 도형이 너무 작아 클릭이 어려운 지역은 눈에 보이지 않는 넓은 원을
 // 얹어 클릭 판정 범위를 넓힌다. 반경은 인접 지역 중심점과 겹치지 않도록
 // lib/region-map-data.ts의 REGION_CENTROIDS 좌표 간 거리를 기준으로 정했다.
 const HIT_RADIUS: Partial<Record<Region, number>> = {
-  seoul: 8,
+  seoul: 6,
   incheon: 8,
-  daegu: 7,
-  daejeon: 9,
-  busan: 12,
-  gwangju: 12,
+  daegu: 6,
+  daejeon: 8,
+  busan: 10,
+  gwangju: 6,
 };
 
 export default function RegionMap() {
