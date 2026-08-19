@@ -1,13 +1,15 @@
 import Link from "next/link";
 import type { Roastery } from "@/types/roastery";
-import RoasteryPhoto from "@/components/RoasteryPhoto";
+import RoasteryPhoto, { type GooglePhoto } from "@/components/RoasteryPhoto";
 
 export default function RoasteryCard({
   roastery,
   photoOverrideUrl,
+  googlePhoto,
 }: {
   roastery: Roastery;
   photoOverrideUrl?: string | null;
+  googlePhoto?: GooglePhoto | null;
 }) {
   return (
     <Link
@@ -19,6 +21,7 @@ export default function RoasteryCard({
         name={roastery.name}
         className="relative -mx-5 -mt-5 mb-4 h-36"
         overrideUrl={photoOverrideUrl}
+        googlePhoto={googlePhoto}
       />
       <p className="text-xs text-foreground/50">{roastery.neighborhood}</p>
       <h3 className="mt-1 text-lg font-semibold">{roastery.name}</h3>

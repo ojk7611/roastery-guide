@@ -1,5 +1,3 @@
-import { existsSync } from "node:fs";
-import path from "node:path";
 import Image from "next/image";
 import flowerMark from "@/public/brand/flower-mark.png";
 
@@ -20,44 +18,55 @@ function pickGradient(slug: string) {
   return GRADIENTS[hash % GRADIENTS.length];
 }
 
+export interface GooglePhoto {
+  url: string;
+  authorName: string | null;
+  authorUri: string | null;
+}
+
 export default function RoasteryPhoto({
   slug,
   name,
   className,
   overrideUrl,
+  googlePhoto,
 }: {
   slug: string;
   name: string;
   className?: string;
   overrideUrl?: string | null;
+  googlePhoto?: GooglePhoto | null;
 }) {
-  if (overrideUrl) {
+  const photoUrl = overrideUrl || googlePhoto?.url;
+  // 방문객이 제보해 대표 사진으로 지정된 것이 아니라 구글에서 가져온
+  // 사진일 때만 저작자 표시를 보여준다(구글 Places API 이용약관 요건).
+  const attribution = !overrideUrl ? googlePhoto : null;
+
+  if (photoUrl) {
     return (
       <div className={`relative overflow-hidden rounded-xl ${className ?? ""}`}>
         <Image
-          src={overrideUrl}
+          src={photoUrl}
           alt={name}
           fill
           sizes="(min-width: 640px) 400px, 100vw"
           className="object-cover"
         />
-      </div>
-    );
-  }
-
-  const photoPath = path.join(process.cwd(), "public", "photos", `${slug}.jpg`);
-  const hasPhoto = existsSync(photoPath);
-
-  if (hasPhoto) {
-    return (
-      <div className={`relative overflow-hidden rounded-xl ${className ?? ""}`}>
-        <Image
-          src={`/photos/${slug}.jpg`}
-          alt={name}
-          fill
-          sizes="(min-width: 640px) 400px, 100vw"
-          className="object-cover"
-        />
+        {attribution &&
+          (attribution.authorUri ? (
+            <a
+              href={attribution.authorUri}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="absolute right-1.5 bottom-1.5 rounded bg-black/50 px-1.5 py-0.5 text-[10px] leading-none text-white/90 backdrop-blur-sm hover:text-white"
+            >
+              사진: {attribution.authorName ?? "Google"}
+            </a>
+          ) : (
+            <span className="absolute right-1.5 bottom-1.5 rounded bg-black/50 px-1.5 py-0.5 text-[10px] leading-none text-white/90 backdrop-blur-sm">
+              사진: {attribution.authorName ?? "Google"}
+            </span>
+          ))}
       </div>
     );
   }

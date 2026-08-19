@@ -6,7 +6,7 @@ import { getRoasteriesByRegion } from "@/data/roasteries";
 import { REGION_AREAS, ETC_LABEL, getAreaSlug } from "@/lib/region-areas";
 import RoasteryCard from "@/components/RoasteryCard";
 import RegionExplorer from "@/components/RegionExplorer";
-import { getPrimaryPhotoMap } from "@/lib/db";
+import { getPrimaryPhotoMap, getPhotoCacheMap } from "@/lib/db";
 
 export async function generateMetadata(
   props: PageProps<"/[region]">,
@@ -48,7 +48,10 @@ export default async function RegionPage(props: PageProps<"/[region]">) {
       )
     : allRoasteries;
 
-  const primaryPhotoMap = await getPrimaryPhotoMap();
+  const [primaryPhotoMap, photoCacheMap] = await Promise.all([
+    getPrimaryPhotoMap(),
+    getPhotoCacheMap(),
+  ]);
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
@@ -101,13 +104,25 @@ export default async function RegionPage(props: PageProps<"/[region]">) {
       <RegionExplorer roasteries={roasteries} />
 
       <div className="mt-10 grid gap-4 sm:grid-cols-2">
-        {roasteries.map((roastery) => (
-          <RoasteryCard
-            key={roastery.id}
-            roastery={roastery}
-            photoOverrideUrl={primaryPhotoMap[roastery.slug] ?? null}
-          />
-        ))}
+        {roasteries.map((roastery) => {
+          const cached = photoCacheMap[roastery.slug];
+          return (
+            <RoasteryCard
+              key={roastery.id}
+              roastery={roastery}
+              photoOverrideUrl={primaryPhotoMap[roastery.slug] ?? null}
+              googlePhoto={
+                cached
+                  ? {
+                      url: cached.blobUrl,
+                      authorName: cached.authorName,
+                      authorUri: cached.authorUri,
+                    }
+                  : null
+              }
+            />
+          );
+        })}
       </div>
     </div>
   );

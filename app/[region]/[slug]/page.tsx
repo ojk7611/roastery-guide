@@ -1,25 +1,20 @@
-import { existsSync } from "node:fs";
-import path from "node:path";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getRegion } from "@/lib/regions";
 import { getRoastery } from "@/data/roasteries";
 import { SITE_URL } from "@/lib/site";
-import { getPrimaryPhotoUrl } from "@/lib/db";
+import { getPrimaryPhotoUrl, getPhotoCacheEntry } from "@/lib/db";
 import { extractClosedDay } from "@/lib/hours";
 import KakaoMap from "@/components/KakaoMap";
 import RoasteryPhoto from "@/components/RoasteryPhoto";
 import RoasteryReviews from "@/components/RoasteryReviews";
 import SubmissionForm from "@/components/SubmissionForm";
 
-function localPhotoUrl(slug: string) {
-  const photoPath = path.join(process.cwd(), "public", "photos", `${slug}.jpg`);
-  return existsSync(photoPath) ? `/photos/${slug}.jpg` : "/brand/flower-mark.png";
-}
-
 async function photoUrl(slug: string) {
   const primary = await getPrimaryPhotoUrl(slug);
-  return primary ?? localPhotoUrl(slug);
+  if (primary) return primary;
+  const cached = await getPhotoCacheEntry(slug);
+  return cached?.blobUrl ?? `${SITE_URL}/brand/flower-mark.png`;
 }
 
 export async function generateMetadata(
@@ -55,8 +50,12 @@ export default async function RoasteryPage(
     notFound();
   }
 
-  const primaryPhotoUrl = await getPrimaryPhotoUrl(roastery.slug);
-  const image = primaryPhotoUrl ?? `${SITE_URL}${localPhotoUrl(roastery.slug)}`;
+  const [primaryPhotoUrl, photoCacheEntry] = await Promise.all([
+    getPrimaryPhotoUrl(roastery.slug),
+    getPhotoCacheEntry(roastery.slug),
+  ]);
+  const image =
+    primaryPhotoUrl ?? photoCacheEntry?.blobUrl ?? `${SITE_URL}/brand/flower-mark.png`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -98,6 +97,15 @@ export default async function RoasteryPage(
           name={roastery.name}
           className="relative mt-6 h-64 w-full"
           overrideUrl={primaryPhotoUrl}
+          googlePhoto={
+            photoCacheEntry
+              ? {
+                  url: photoCacheEntry.blobUrl,
+                  authorName: photoCacheEntry.authorName,
+                  authorUri: photoCacheEntry.authorUri,
+                }
+              : null
+          }
         />
 
         {(() => {

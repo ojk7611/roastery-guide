@@ -1,5 +1,12 @@
 import { neon } from "@neondatabase/serverless";
 
+export interface PhotoCacheEntry {
+  blobUrl: string;
+  authorName: string | null;
+  authorUri: string | null;
+  fetchedAt: string;
+}
+
 export interface Submission {
   id: number;
   roasterySlug: string;
@@ -47,9 +54,102 @@ async function ensureSchema(sql: NonNullable<ReturnType<typeof getSql>>) {
       await sql`
         ALTER TABLE submissions ADD COLUMN IF NOT EXISTS is_primary_photo BOOLEAN NOT NULL DEFAULT false
       `;
+      // 구글 Places API 사진 캐시. 저작자 표시 의무 + 30일 이상 캐시 금지
+      // 약관을 지키기 위해, 사진은 Vercel Blob에 두고 이 표에는 URL과
+      // 저작자 정보, 마지막으로 새로 받아온 시각만 저장한다.
+      await sql`
+        CREATE TABLE IF NOT EXISTS photo_cache (
+          roastery_slug TEXT PRIMARY KEY,
+          blob_url TEXT NOT NULL,
+          author_name TEXT,
+          author_uri TEXT,
+          fetched_at TIMESTAMPTZ NOT NULL DEFAULT now()
+        )
+      `;
     })();
   }
   await schemaReady;
+}
+
+function mapPhotoCacheRow(row: Record<string, unknown>): PhotoCacheEntry {
+  return {
+    blobUrl: row.blob_url as string,
+    authorName: row.author_name as string | null,
+    authorUri: row.author_uri as string | null,
+    fetchedAt: row.fetched_at as string,
+  };
+}
+
+export async function upsertPhotoCache(
+  roasterySlug: string,
+  input: { blobUrl: string; authorName: string | null; authorUri: string | null },
+) {
+  const sql = getSql();
+  if (!sql) throw new Error("DATABASE_URL이 설정되지 않았습니다.");
+  await ensureSchema(sql);
+
+  await sql`
+    INSERT INTO photo_cache (roastery_slug, blob_url, author_name, author_uri, fetched_at)
+    VALUES (${roasterySlug}, ${input.blobUrl}, ${input.authorName}, ${input.authorUri}, now())
+    ON CONFLICT (roastery_slug) DO UPDATE SET
+      blob_url = EXCLUDED.blob_url,
+      author_name = EXCLUDED.author_name,
+      author_uri = EXCLUDED.author_uri,
+      fetched_at = now()
+  `;
+}
+
+export async function getPhotoCacheMap(): Promise<
+  Record<string, PhotoCacheEntry>
+> {
+  const sql = getSql();
+  if (!sql) return {};
+  await ensureSchema(sql);
+
+  const rows = await sql`SELECT * FROM photo_cache`;
+  const map: Record<string, PhotoCacheEntry> = {};
+  for (const row of rows) {
+    map[row.roastery_slug as string] = mapPhotoCacheRow(row);
+  }
+  return map;
+}
+
+export async function getPhotoCacheEntry(
+  roasterySlug: string,
+): Promise<PhotoCacheEntry | null> {
+  const sql = getSql();
+  if (!sql) return null;
+  await ensureSchema(sql);
+
+  const rows = await sql`
+    SELECT * FROM photo_cache WHERE roastery_slug = ${roasterySlug} LIMIT 1
+  `;
+  return rows.length > 0 ? mapPhotoCacheRow(rows[0]) : null;
+}
+
+// 전체 로스터리 슬러그 중 사진을 새로 받아온 지 가장 오래된(또는 아직
+// 한 번도 못 받아온) 순서로 limit개를 골라 반환한다. 매일 이 함수로 고른
+// 만큼만 갱신하면, 전체 목록을 자연스럽게 30일 주기로 순환하며 새로고침하게 된다.
+export async function getStalePhotoSlugs(
+  allSlugs: string[],
+  limit: number,
+): Promise<string[]> {
+  const sql = getSql();
+  if (!sql) return [];
+  await ensureSchema(sql);
+
+  const rows = await sql`SELECT roastery_slug, fetched_at FROM photo_cache`;
+  const fetchedAt = new Map<string, number>();
+  for (const row of rows) {
+    fetchedAt.set(
+      row.roastery_slug as string,
+      new Date(row.fetched_at as string).getTime(),
+    );
+  }
+
+  return [...allSlugs]
+    .sort((a, b) => (fetchedAt.get(a) ?? 0) - (fetchedAt.get(b) ?? 0))
+    .slice(0, limit);
 }
 
 function mapRow(row: Record<string, unknown>): Submission {
